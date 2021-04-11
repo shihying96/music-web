@@ -1,0 +1,1462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>page1</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500&family=Poppins:wght@200;300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Allerta' rel='stylesheet'>
+
+
+    <style>
+        * {
+            margin: 0;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-family: 'Poppins', sans-serif;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 200%;
+        }
+
+        html {
+            height: 100%;
+        }
+
+
+
+
+        .jumbotron {
+            /* background: linear-gradient(to top, #fad98c 30%, #f8f6ca); */
+            background-image: linear-gradient(to bottom, #ffedb7, #fffef9 70%, #fffde9, #ffedb5);
+            height: 100%;
+            position: relative;
+
+        }
+
+        @keyframes bganimation {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+
+        .jumbotron .jumbotron-fluid {
+            padding: 0;
+        }
+
+
+
+
+
+
+
+        @media (max-width: 375px) {
+            body {
+                height: 100%;
+            }
+
+            html {
+                height: 100%;
+            }
+
+
+
+
+            .jumbotron {
+                /* background: linear-gradient(to top, #fad98c 30%, #f8f6ca); */
+                background-image: linear-gradient(to bottom, #ffedb7, #fffef9 70%, #fffde9, #ffedb5);
+                height: 100%;
+                position: relative;
+
+            }
+
+            .web-nav {
+                display: none;
+            }
+
+
+
+
+
+            .mobile-bottom-nav {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                z-index: 1000;
+                will-change: transform;
+                transform: translateZ(0);
+                display: flex;
+                height: 50px;
+                box-shadow: 0 -2px 5px -2px #f1be45ab;
+                background-color: #FFDD90;
+            }
+
+            .mobile-bottom-nav__item {
+                flex-grow: 1;
+                text-align: center;
+                font-size: 12px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            .mobile-bottom-nav__item--active {
+                color: #fff;
+            }
+
+            .mobile-bottom-nav__item-content {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .home {
+                width: 69.53px;
+            }
+
+            .home img {
+                width: 30%;
+            }
+
+            .navbar {
+                position: fixed;
+                top: 0;
+                /* Position the navbar at the top of the page */
+                width: 100%;
+
+            }
+
+            .user_wrap {
+                width: 16px;
+                float: right;
+                padding: 0;
+                margin-top: 24px;
+                margin-right: 20px;
+            }
+
+            .user img {
+                width: 100%;
+
+            }
+
+
+            .navbar-brand {
+                display: flex;
+
+                width: 100px;
+                height: 50px;
+                margin: 0 auto;
+                margin-left: 20px;
+                padding: 10px 10px;
+                margin-top: 10px;
+
+            }
+
+            .navbar-brand img {
+                width: 100%;
+                height: auto;
+            }
+
+            .login_wrap {
+                display: flex;
+            }
+
+            .login {
+
+                font-size: 12px;
+                font-family: 'Poppins', sans-serif;
+                font-weight: normal;
+                color: #ffffff;
+                width: 70px;
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+                margin: 0 auto;
+                letter-spacing: 0.4px;
+                border-radius: 20px;
+                margin-left: 260px;
+                border: 1px solid rgba(255, 255, 255, 0.452);
+            }
+
+            .signup {
+                margin-left: 0;
+
+            }
+
+
+            .slider_title {
+                font-family: 'Poppins', sans-serif;
+                font-size: 19px;
+                font-weight: 500px;
+                letter-spacing: 0.15px;
+                color: rgb(70, 70, 70);
+                margin-bottom: 20px;
+                margin-left: -200px;
+            }
+
+            .slider {
+                text-align: center;
+                overflow: hidden;
+                margin-top: 80px;
+            }
+
+            .slides {
+                display: flex;
+                overflow-x: auto;
+                scroll-snap-type: x mandatory;
+                scroll-behavior: smooth;
+                -webkit-overflow-scrolling: touch;
+
+            }
+
+            .slides::-webkit-scrollbar {
+                width: 8px;
+                height: 6px;
+            }
+
+            .slides::-webkit-scrollbar-thumb {
+                /* background: #FF986A; */
+                border-radius: 10px;
+            }
+
+            .slides::-webkit-scrollbar-track {
+                background: transparent;
+
+            }
+
+            .slides>div {
+                scroll-snap-align: start;
+                flex-shrink: 0;
+                width: 150px;
+                height: 150px;
+                box-shadow: 3px 3px 12px#0000007a;
+                margin-right: 15px;
+                margin-bottom: 70px;
+                border-radius: 10px;
+                transform-origin: center center;
+                transform: scale(1);
+                transition: transform 0.5s;
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 100px;
+            }
+
+
+
+            .slider>a {
+                display: inline-flex;
+                width: 1.5rem;
+                height: 1.5rem;
+                background: white;
+                text-decoration: none;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                margin: 0 0 0.5rem 0;
+                position: relative;
+            }
+
+            .slider>a:active {
+                top: 1px;
+            }
+
+            .slider>a:focus {
+                background: #000;
+            }
+
+            .slide-1 {
+                background: url(./images/sia.jpg) center;
+                background-size: cover;
+            }
+
+            .slide-1>div {
+                font-size: 15px;
+                font-weight: 400;
+                letter-spacing: 0.15px;
+                margin-top: 220px;
+
+            }
+
+            .slide-1>.text {
+
+                font-size: 15px;
+                font-weight: 400;
+                letter-spacing: 0.15px;
+                margin-top: 250px;
+                margin-left: -90px;
+                width: fit-content;
+            }
+
+            .text span {
+
+                font-size: 12px;
+                letter-spacing: 0.4px;
+                font-weight: 400;
+
+            }
+
+            .imgiu {
+                background: url(./images/iu.jpg) center;
+                background-size: cover;
+            }
+
+            .imgzuto {
+                background: url(./images/ZUTOMAYO.jpg) center;
+                background-size: cover;
+            }
+
+            .imgSoulFa {
+                background: url(./images/soul.jpg) center;
+                background-size: cover;
+            }
+
+            .imgchungha {
+                background: url(./images/CHUNG\ HA.jpg) center;
+                background-size: cover;
+            }
+
+            .imgkiro {
+                background: url(./images/kiro.jpg) center;
+                background-size: cover;
+            }
+
+            .imgsam {
+                background: url(./images/samsmith.jpg) center;
+                background-size: cover;
+            }
+
+            .text span {
+                margin-left: -25px;
+            }
+
+            .wrap_text {
+                margin-bottom: -20px;
+                margin-left: -95px;
+            }
+
+            .imgiu .text {
+                margin-left: 20px;
+            }
+
+            .imgiu .text span {
+                margin-left: -55px;
+            }
+
+            .imgzuto .text {
+                margin-left: 5px;
+            }
+
+            .imgzuto .text span {
+                margin-left: 15px;
+            }
+
+            .imgSoulFa .text {
+                margin-left: 60px;
+            }
+
+            .imgSoulFa .text span {
+                margin-left: -12px;
+                font-family: 'Noto Sans TC', sans-serif;
+            }
+
+            .imgchungha .text {
+                margin-left: 30px;
+            }
+
+            .imgchungha .text span {
+                margin-left: -12px;
+            }
+
+            .imgsam .text {
+                margin-left: -25px;
+            }
+
+            .imgsam .text span {
+                margin-left: 40px;
+            }
+
+            .imgkiro .text {
+                margin-left: 20px;
+            }
+
+            .imgkiro .text span {
+                margin-left: 12px;
+            }
+
+
+
+            .slider2 {
+                margin-top: 30px;
+            }
+
+            .imggen {
+                background: url(./images/Gen\ Hoshino.jpg) center;
+                background-size: cover;
+            }
+
+            .imggen .text {
+                margin-left: 10px;
+            }
+
+            .imggen .text span {
+                margin-left: 28px;
+            }
+
+            .imgthefin {
+                background: url(./images/The\ fin..jpg) center;
+                background-size: cover;
+            }
+
+            .imgthefin .text {
+                margin-left: 15px;
+            }
+
+            .imgsaka {
+                background: url(./images/flower.jpg) center;
+                background-size: cover;
+            }
+
+            .imgsaka .text {
+                margin-left: -10px;
+                font-family: 'Noto Sans TC', sans-serif;
+            }
+
+            .imgsaka .text span {
+                margin-left: 35px;
+
+            }
+
+            .img1975 {
+                background: url(./images/1975.jpg) center;
+                background-size: cover;
+            }
+
+            .img1975 .text {
+                margin-left: 60px;
+            }
+
+            .img1975 .text span {
+                margin-left: -55px;
+            }
+
+            .imgsasha {
+                background: url(./images/sasha.jpg) center;
+                background-size: cover;
+            }
+
+            .imgsasha .text {
+                margin-left: 20px;
+
+            }
+
+            .imgsasha .text span {
+                margin-left: 10px;
+
+            }
+
+            .recent {
+                margin-left: -180px;
+            }
+
+            .web_slider_title {
+                display: none;
+            }
+
+            #container {
+                display: none;
+            }
+
+            .video_wrap {
+                display: none;
+            }
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        @media (min-width: 1200px) {
+
+            .web-nav {
+                width: 100%;
+                position: fixed;
+                bottom: 0;
+                top: 0;
+                right: 0;
+                z-index: 1000;
+                will-change: transform;
+                display: flex;
+                height: 60px;
+                box-shadow: 0 -2px 5px -2px #f1be45ab;
+                background-color: #FFDD90;
+
+            }
+
+
+            .web-nav__item {
+                display: flex;
+                margin: 0 auto;
+                margin-top: 20px;
+                width: fit-content;
+                margin-right: 40px;
+                /* border: 1px solid red; */
+            }
+
+            .web-nav__item-content {
+                margin-right: 10px;
+            }
+
+            .mobile-bottom-nav {
+                display: none;
+                /* position: fixed;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                z-index: 1000;
+                will-change: transform;
+                transform: translateZ(0);
+                display: flex;
+                height: 50px;
+                box-shadow: 0 -2px 5px -2px #f1be45ab;
+                background-color: #FFDD90; */
+            }
+
+
+
+            .home {
+                width: 69.53px;
+            }
+
+            .home img {
+                width: 30%;
+            }
+
+
+
+            .user_wrap {
+                width: 16px;
+                float: right;
+                padding: 0;
+                z-index: 1000;
+                position: relative;
+                margin-top: -2px;
+                margin-right: -330px;
+            }
+
+            .user img {
+                width: 100%;
+
+            }
+
+
+            .navbar-brand {
+                display: flex;
+                width: 100px;
+                height: 50px;
+                margin: 0 auto;
+                margin-left: 80px;
+                padding: 10px 10px;
+                margin-top: -14px;
+                margin-left: -1500px;
+                z-index: 1000;
+                position: absolute;
+
+
+            }
+
+            .navbar-brand img {
+                width: 100%;
+                height: auto;
+            }
+
+            .login_wrap {
+                display: flex;
+            }
+
+            .login {
+
+                font-size: 12px;
+                font-family: 'Poppins', sans-serif;
+                font-weight: normal;
+                color: #ffffff;
+                width: 70px;
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+                margin: 0 auto;
+                letter-spacing: 0.4px;
+                border-radius: 20px;
+                margin-left: 260px;
+                border: 1px solid rgba(255, 255, 255, 0.452);
+            }
+
+            .signup {
+                margin-left: 0;
+
+            }
+
+            .slider {
+                display: none;
+            }
+
+            .slider_title {
+                font-family: 'Poppins', sans-serif;
+                font-size: 19px;
+                font-weight: 500px;
+                letter-spacing: 0.15px;
+                color: rgb(70, 70, 70);
+                margin-bottom: 20px;
+                margin-left: -200px;
+            }
+
+            .slider {
+                text-align: center;
+                overflow: hidden;
+                margin-top: 80px;
+            }
+
+            .slides {
+                display: flex;
+                overflow-x: auto;
+                margin-left: 400px;
+                scroll-snap-type: x mandatory;
+                scroll-behavior: smooth;
+                -webkit-overflow-scrolling: touch;
+
+            }
+
+            .slides::-webkit-scrollbar {
+                width: 8px;
+                height: 6px;
+            }
+
+            .slides::-webkit-scrollbar-thumb {
+                /* background: #FF986A; */
+                border-radius: 10px;
+            }
+
+            .slides::-webkit-scrollbar-track {
+                background: transparent;
+
+            }
+
+            .slides>div {
+                scroll-snap-align: start;
+                flex-shrink: 0;
+                width: 150px;
+                height: 150px;
+                box-shadow: 3px 3px 12px#0000007a;
+                margin-right: 15px;
+                margin-bottom: 70px;
+                border-radius: 10px;
+                transform-origin: center center;
+                transform: scale(1);
+                transition: transform 0.5s;
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 100px;
+            }
+
+
+
+            .slider>a {
+                display: inline-flex;
+                width: 1.5rem;
+                height: 1.5rem;
+                background: white;
+                text-decoration: none;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                margin: 0 0 0.5rem 0;
+                position: relative;
+            }
+
+            .slider>a:active {
+                top: 1px;
+            }
+
+            .slider>a:focus {
+                background: #000;
+            }
+
+            .slide-1 {
+                background: url(./images/sia.jpg) center;
+                background-size: cover;
+            }
+
+            .slide-1>div {
+                font-size: 15px;
+                font-weight: 400;
+                letter-spacing: 0.15px;
+                margin-top: 220px;
+
+            }
+
+            .slide-1>.text {
+
+                font-size: 15px;
+                font-weight: 400;
+                letter-spacing: 0.15px;
+                margin-top: 250px;
+                margin-left: -90px;
+                width: fit-content;
+            }
+
+            .text span {
+
+                font-size: 12px;
+                letter-spacing: 0.4px;
+                font-weight: 400;
+
+            }
+
+            .imgiu {
+                background: url(./images/iu.jpg) center;
+                background-size: cover;
+            }
+
+            .imgzuto {
+                background: url(./images/ZUTOMAYO.jpg) center;
+                background-size: cover;
+            }
+
+            .imgSoulFa {
+                background: url(./images/soul.jpg) center;
+                background-size: cover;
+            }
+
+            .imgchungha {
+                background: url(./images/CHUNG\ HA.jpg) center;
+                background-size: cover;
+            }
+
+            .imgkiro {
+                background: url(./images/kiro.jpg) center;
+                background-size: cover;
+            }
+
+            .imgsam {
+                background: url(./images/samsmith.jpg) center;
+                background-size: cover;
+            }
+
+            .text span {
+                margin-left: -25px;
+            }
+
+            .wrap_text {
+                margin-bottom: -20px;
+                margin-left: -95px;
+            }
+
+            .imgiu .text {
+                margin-left: 20px;
+            }
+
+            .imgiu .text span {
+                margin-left: -55px;
+            }
+
+            .imgzuto .text {
+                margin-left: 5px;
+            }
+
+            .imgzuto .text span {
+                margin-left: 15px;
+            }
+
+            .imgSoulFa .text {
+                margin-left: 60px;
+            }
+
+            .imgSoulFa .text span {
+                margin-left: -12px;
+                font-family: 'Noto Sans TC', sans-serif;
+            }
+
+            .imgchungha .text {
+                margin-left: 30px;
+            }
+
+            .imgchungha .text span {
+                margin-left: -12px;
+            }
+
+            .imgsam .text {
+                margin-left: -25px;
+            }
+
+            .imgsam .text span {
+                margin-left: 40px;
+            }
+
+            .imgkiro .text {
+                margin-left: 20px;
+            }
+
+            .imgkiro .text span {
+                margin-left: 12px;
+            }
+
+
+
+            .slider2 {
+                margin-top: 30px;
+                display: none;
+            }
+
+            .imggen {
+                background: url(./images/Gen\ Hoshino.jpg) center;
+                background-size: cover;
+            }
+
+            .imggen .text {
+                margin-left: 10px;
+            }
+
+            .imggen .text span {
+                margin-left: 28px;
+            }
+
+            .imgthefin {
+                background: url(./images/The\ fin..jpg) center;
+                background-size: cover;
+            }
+
+            .imgthefin .text {
+                margin-left: 15px;
+            }
+
+            .imgsaka {
+                background: url(./images/flower.jpg) center;
+                background-size: cover;
+            }
+
+            .imgsaka .text {
+                margin-left: -10px;
+                font-family: 'Noto Sans TC', sans-serif;
+            }
+
+            .imgsaka .text span {
+                margin-left: 35px;
+
+            }
+
+            .img1975 {
+                background: url(./images/1975.jpg) center;
+                background-size: cover;
+            }
+
+            .img1975 .text {
+                margin-left: 60px;
+            }
+
+            .img1975 .text span {
+                margin-left: -55px;
+            }
+
+            .imgsasha {
+                background: url(./images/sasha.jpg) center;
+                background-size: cover;
+            }
+
+            .imgsasha .text {
+                margin-left: 20px;
+
+            }
+
+            .imgsasha .text span {
+                margin-left: 10px;
+
+            }
+
+            .recent {
+                margin-left: -180px;
+            }
+
+
+
+            #slider-container {
+                height: 300px;
+                width: 80vw;
+                margin: 0 auto;
+                margin-top: 20px;
+                max-width: 1400px;
+                position: relative;
+                overflow: hidden;
+
+            }
+
+            #slider-container .btn {
+                position: absolute;
+                top: calc(50% - 30px);
+                height: 30px;
+                width: 30px;
+                margin-top: -10px;
+                border-left: 6px solid #ffffff49;
+                border-top: 6px solid#ffffff49;
+
+            }
+
+            #slider-container .btn:hover {
+                transform: scale(1.2);
+            }
+
+
+
+            #slider-container .btn:first-of-type {
+                transform: rotate(-45deg);
+                left: 10px
+            }
+
+            #slider-container .btn:last-of-type {
+                transform: rotate(135deg);
+                right: 10px;
+            }
+
+            #slider-container #slider {
+                display: flex;
+                width: 1000%;
+                height: 80%;
+                transition: all .5s;
+            }
+
+            .slide {
+                height: 215px;
+                margin: auto 10px;
+                border-radius: 20px;
+                box-shadow: 3px 3px 12px#0000007a;
+                background: url(./images/sia.jpg) center center no-repeat;
+                background-size: cover;
+            }
+
+            .webiu {
+                background: url(./images/iu.jpg) center center no-repeat;
+                background-size: cover;
+            }
+
+            .webzuto {
+                background: url(./images/ZUTOMAYO.jpg) center center no-repeat;
+                background-size: cover;
+            }
+
+            .websoul {
+                background: url(./images/soul.jpg) center center no-repeat;
+                background-size: cover;
+            }
+
+
+            .webchungha {
+                background: url(./images/CHUNG\ HA.jpg) center center no-repeat;
+                background-size: cover;
+            }
+
+            .webSam {
+                background: url(./images/samsmith.jpg) center center no-repeat;
+                background-size: cover;
+            }
+
+            .webkiro {
+                background: url(./images/kiro.jpg) center center no-repeat;
+                background-size: cover;
+            }
+
+            .webyui {
+                background: url(./images/yui.jpg) center center no-repeat;
+                background-size: cover;
+            }
+
+            .webozi {
+                background: url(./images/ozi.jpg) center center no-repeat;
+                background-size: cover;
+            }
+
+            #slider-container #slider .slide span {
+                color: white;
+                font-size: 150px;
+            }
+
+
+
+            @media only screen and (min-width: 1100px) {
+
+                #slider-container #slider .slide {
+                    width: calc(2.5% - 135px);
+                }
+
+            }
+
+            @media only screen and (max-width: 1100px) {
+
+                #slider-container #slider .slide {
+                    width: calc(3.3333333% - 20px);
+                }
+
+            }
+
+            .web_slider_title {
+                font-family: 'Poppins', sans-serif;
+                font-size: 19px;
+                font-weight: 500px;
+                letter-spacing: 0.15px;
+                color: rgb(70, 70, 70);
+                margin-left: 250px;
+                margin-top: 50px;
+
+            }
+
+            .slideweb {
+                margin-top: 230px;
+                /* border: 1px solid red; */
+                font-family: 'Poppins', sans-serif;
+                font-size: 15px;
+                font-weight: 400;
+                letter-spacing: 0.15px;
+                color: rgb(70, 70, 70);
+            }
+
+            .slideweb_inside {
+                font-size: 12px;
+                letter-spacing: 0.4px;
+                font-weight: 400;
+                font-family: 'Poppins', sans-serif;
+                font-weight: normal;
+            }
+
+            .soultext {
+                font-family: 'Noto Sans TC', sans-serif;
+                font-size: 12px;
+                letter-spacing: 0.4px;
+
+            }
+
+            .video {
+                margin-top: 40px;
+                -webkit-border-radius: 20px;
+                -moz-border-radius: 20px;
+                border-radius: 20px;
+                margin-left: 250px;
+            }
+
+            .video_wrap {
+                display: flex;
+            }
+
+            h1 {
+                font-family: 'Open Sans', sans-serif;
+                font-size: 13pt;
+                font-weight: 600;
+                text-transform: uppercase;
+                color: white;
+                cursor: default;
+            }
+
+            h4 {
+                font-family: 'Open Sans', sans-serif;
+                font-size: 8pt;
+                font-weight: 400;
+                cursor: default;
+            }
+
+            h2 {
+                font-family: 'Open Sans', sans-serif;
+                font-size: 13pt;
+                font-weight: 300;
+                color: white;
+                cursor: default;
+            }
+
+            .player {
+                height: 80px;
+                width: 480px;
+                box-shadow: 3px 3px 10px #9292927a;
+                position: absolute;
+                border-radius: 20px;
+                -webkit-touch-callout: none;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+                margin-left: 490px;
+                margin-top: 80px;
+                transform: translate(-50%, -50%);
+                -webkit-transform: translate(-50%, -50%);
+            }
+
+            .player ul {
+                list-style: none;
+
+            }
+
+            .player ul li {
+                display: inline-block;
+            }
+
+            .cover {
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+
+            .cover img {
+                height: 80px;
+                border-radius: 20px;
+                width: 80px;
+            }
+
+            .info h1 {
+                margin-top: 15px;
+                margin-left: 90px;
+                line-height: 0;
+                letter-spacing: 0.1px;
+                font-size: 13px;
+                font-family: 'Poppins', sans-serif;
+            }
+
+            .info h4 {
+                margin-left: 90px;
+                line-height: 20px;
+                color: #636367;
+                font-family: 'Poppins', sans-serif;
+            }
+
+            .info h2 {
+                margin-left: 180px;
+            }
+
+            .button-items {
+                margin-left: 180px;
+            }
+
+            #slidermusic {
+                width: 182px;
+                height: 4px;
+                background: #CCCCCF;
+                border-radius: 2px;
+                margin-left: -90px;
+            }
+
+            #slidermusic div {
+                width: 4px;
+                height: 4px;
+                margin-top: 1px;
+                background: #FF986A;
+                border-radius: 2px;
+            }
+
+            #timer {
+                color: #494b4e;
+                line-height: 0;
+                font-size: 9pt;
+                margin-top: -2px;
+                margin-right: 110px;
+                float: right;
+                font-family: Arial, Sans-Serif;
+            }
+
+            .controls {
+                margin-top: -35px;
+                margin-left: 150px;
+            }
+
+            .controls svg:nth-child(2) {
+                margin-left: 5px;
+                margin-right: 5px;
+            }
+
+            #play {
+                padding: 0 3px;
+                width: 30px;
+                height: 30px;
+                enable-background: new 0 0 25 25;
+            }
+
+            #play g {
+                stroke: #CCCCCF;
+                stroke-width: 1;
+                stroke-miterlimit: 10;
+            }
+
+            #play g path {
+                fill: #CCCCCF;
+            }
+
+            #play:hover {
+                cursor: pointer;
+            }
+
+            #play:hover g {
+                stroke: #FF986A;
+                cursor: pointer;
+            }
+
+            #play:hover g path {
+                fill: #FF986A;
+                cursor: pointer;
+            }
+
+            .step-backward {
+                width: 18px;
+                height: 18px;
+                enable-background: new 0 0 25 25;
+                margin-bottom: 5px;
+            }
+
+            .step-backward g polygon {
+                fill: #CCCCCF;
+            }
+
+            .step-foreward {
+                width: 18px;
+                height: 18px;
+                enable-background: new 0 0 25 25;
+                margin-bottom: 5px;
+            }
+
+            .step-foreward g polygon {
+                fill: #CCCCCF;
+            }
+
+            #pause {
+                enable-background: new 0 0 25 25;
+                width: 30px;
+                height: 30px;
+                position: absolute;
+                margin-left: -38px;
+                cursor: pointer;
+            }
+
+            #pause rect {
+                fill: white;
+            }
+
+            #pause:hover rect {
+                fill: #FF986A;
+            }
+
+            .step-backward g polygon:hover,
+            .step-foreward g polygon:hover {
+                fill: #FF986A;
+                cursor: pointer;
+            }
+
+            .social {
+                text-align: center;
+            }
+
+            .twitter {
+                color: #bdbdbd;
+                font-family: sans-serif;
+                text-decoration: none;
+            }
+
+            .twitter:hover {
+                color: #ecf0f1;
+            }
+
+            .github {
+                color: #bdbdbd;
+                font-family: sans-serif;
+                text-decoration: none;
+            }
+
+            .github:hover {
+                color: #ecf0f1;
+            }
+
+            p {
+                color: #bdbdbd;
+            }
+
+            #skip {
+                float: right;
+                margin-top: 10px;
+            }
+
+            #skip p {
+                color: #2980b9;
+            }
+
+            #skip p:hover {
+                color: #e74c3c;
+                cursor: pointer;
+            }
+
+            .expend {
+                padding: 0.5px;
+                cursor: pointer;
+            }
+
+            .expend svg:hover g polygon {
+                fill: #ef6dbc;
+            }
+
+            .music2 {
+                margin-top: 200px;
+            }
+
+            .music3 {
+                margin-top: 300px;
+            }
+
+            .web_slider_title .track {
+                margin-left: 0;
+                margin-right: 70px;
+            }
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="web-nav">
+        <div class="web-nav__item web-nav__item--active">
+
+            <nav class="navbar">
+                <div class="navbar-brand" href="#">
+
+                    <img src="./images/logo.svg" alt="">
+
+                </div>
+                <div class="user_wrap">
+                    <img class="user" src="./images/user.svg" alt="">
+                </div>
+            </nav>
+
+
+
+            <div class="web-nav__item-content">
+
+                <div class="home">
+                    <a href="https://codepen.io/DylanBarnett/pen/QzRwxW"><img src="./images/search.svg" alt=""></a>
+                </div>
+            </div>
+
+
+            <div class="web-nav__item-content">
+
+                <div class="home"><a href="https://codepen.io/DylanBarnett/pen/QzRwxW"><img src="./images/library.svg"
+                            alt=""></a>
+
+                </div>
+            </div>
+
+
+            <div class="web-nav__item-content">
+
+                <div class="home"> <a href="https://codepen.io/DylanBarnett/pen/QzRwxW"><img src="./images/playlist.svg"
+                            alt=""></a></div>
+
+            </div>
+
+
+
+            <div class="web-nav__item-content">
+
+                <div class="home"><a href="https://codepen.io/DylanBarnett/pen/QzRwxW"><img src="./images/heart.svg"
+                            alt=""></a></div>
+
+            </div>
+
+        </div>
+    </nav>
+
+
+
+    <!-- linear-gradient bg -->
+    <div class="jumbotron jumbotron-fluid">
+        <!-- Just an image -->
+
+        <div class="music">
+            <img src="" alt="">
+        </div>
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+</body>
+
+</html>

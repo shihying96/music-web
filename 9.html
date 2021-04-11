@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <style>
+        /*PEN STYLES*/
+        .audio-player {
+            width: 450px;
+        }
+
+        .dlxPlayer {
+            box-sizing: border-box;
+            color: #fff;
+            max-height: auto;
+            max-width: 100%;
+            margin: 0 auto;
+            text-align: center;
+            width: 600px;
+            /*POSITION*/
+            position: relative;
+            /*TRANSITION*/
+            transition: all 0.2s ease;
+            border-radius: 4px;
+        }
+
+        .dlxPlayer ul,
+        .dlxPlayer li {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .dlxPlayer .song_image {
+            display: block;
+            height: auto;
+            width: 100%;
+            overflow: hidden;
+            z-index: -1;
+            /*POSITION*/
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+
+        .dlxPlayer .song_image:after {
+            content: "";
+            background: #000;
+            background: rgba(0, 0, 0, 0.4);
+            /*POSITION*/
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+
+        .dlxPlayer .song_image img {
+            width: 100%;
+            max-width: 100%;
+            margin: auto;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            filter: blur(3px);
+        }
+
+        .dlxPlayer .song_info .song_title {
+            color: #fff;
+            font-size: 1.25em;
+        }
+
+        .dlxPlayer .song_info .song_album {
+            color: #999;
+        }
+
+        .dlxPlayer .song_info .song_artist {
+            color: #ccc;
+            font-size: 0.75em;
+        }
+
+        .dlxPlayer .player_controls {
+            margin: 15px auto 0;
+            font-size: 1.5em;
+            overflow: hidden;
+            margin-top: -50px;
+            width: 100%;
+            max-width: 300px;
+        }
+
+        .dlxPlayer .player_controls li {
+            display: inline-block;
+            margin: 0 2%;
+        }
+
+
+
+        .dlxPlayer .player_controls li.player_play {
+            float: left;
+        }
+
+        .dlxPlayer .player_controls li.player_volume {
+            float: right;
+        }
+
+        .dlxPlayer .player_controls li.player_volume.muted {
+            float: right;
+            display: none;
+            margin-right: 11px;
+            margin-left: 0;
+        }
+
+        .dlxPlayer .player_controls li.player_pause {
+            display: none;
+            float: left;
+        }
+
+        .dlxPlayer .player_seeker {
+            display: block;
+            background: rgba(255, 255, 255, 0.4);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="simple-player">
+
+        <audio controls class="audio-player">
+            <source id="audio-player__src"
+                src="https://storage.googleapis.com/chydlx/codepen/simple-music-player/mp3/this-is-life.mp3"
+                type="audio/mpeg">
+        </audio>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script>const audioPlayer = $(".audio-player");
+        const audioPlayerSrc = $("#audio-player__src");
+        const audioNumbers = $(".audioNumber");
+
+
+        audioNumbers.each(function () {
+            $(this).on("click", function (e) {
+                let src = $(this).attr("data-music-src");
+                audioPlayerSrc.attr("src", src)[0];
+                audioPlayer[0].pause();
+                audioPlayer[0].load();
+                audioPlayer[0].play();
+            });
+        });
+    </script>
+</body>
+
+</html>

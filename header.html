@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>header</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500&family=Poppins:wght@200;300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Allerta' rel='stylesheet'>
+
+
+    <style>
+        * {
+            margin: 0;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-family: 'Poppins', sans-serif;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 200%;
+        }
+
+        html {
+            height: 100%;
+        }
+
+
+
+
+        .jumbotron {
+            /* background: linear-gradient(to top, #fad98c 30%, #f8f6ca); */
+            /* background-image: linear-gradient(to bottom, #ffedb7, #fffef9 70%, #fffde9, #ffedb5); */
+            height: 200%;
+            position: relative;
+            background-color: #fffdeb;
+
+        }
+
+        @keyframes bganimation {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+
+        .jumbotron .jumbotron-fluid {
+            padding: 0;
+        }
+
+
+
+
+
+
+
+        @media (max-width: 375px) {
+            body {
+                height: 100%;
+            }
+
+            html {
+                height: 100%;
+            }
+
+
+
+
+            .jumbotron {
+                /* background: linear-gradient(to top, #fad98c 30%, #f8f6ca); */
+                /* background-image: linear-gradient(to bottom, #ffedb7, #fffef9 70%, #fffde9, #ffedb5); */
+
+                height: 100%;
+                position: relative;
+
+            }
+
+            .web-nav {
+                display: none;
+            }
+
+
+
+
+
+            .mobile-bottom-nav {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                z-index: 1000;
+                will-change: transform;
+                transform: translateZ(0);
+                display: flex;
+                height: 50px;
+                box-shadow: 0 -2px 5px -2px #f1be45ab;
+                background-color: #ffde90d7;
+            }
+
+            .mobile-bottom-nav__item {
+                flex-grow: 1;
+                text-align: center;
+                font-size: 12px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            .mobile-bottom-nav__item--active {
+                color: #fff;
+            }
+
+            .mobile-bottom-nav__item-content {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .home {
+                width: 69.53px;
+            }
+
+            .home img {
+                width: 30%;
+            }
+
+            .navbar {
+                position: fixed;
+                top: 0;
+                /* Position the navbar at the top of the page */
+                width: 100%;
+
+            }
+
+            .user_wrap {
+                width: 16px;
+                float: right;
+                padding: 0;
+                position: absolute;
+                z-index: 2;
+                margin-top: 24px;
+                margin-left: 330px;
+            }
+
+            .user img {
+                width: 100%;
+
+            }
+
+
+            .navbar-brand {
+                position: absolute;
+                z-index: 2;
+                width: 100px;
+                height: 50px;
+                margin: 0 auto;
+                margin-left: 20px;
+                padding: 10px 10px;
+                margin-top: 10px;
+
+            }
+
+            .navbar-brand img {
+                width: 100%;
+                height: 100%;
+
+
+            }
+
+            .login_wrap {
+                display: flex;
+            }
+
+            .login {
+
+                font-size: 12px;
+                font-family: 'Poppins', sans-serif;
+                font-weight: normal;
+                color: #ffffff;
+                width: 70px;
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+                margin: 0 auto;
+                letter-spacing: 0.4px;
+                border-radius: 20px;
+                margin-left: 260px;
+                border: 1px solid rgba(255, 255, 255, 0.452);
+            }
+
+            .signup {
+                margin-left: 0;
+
+            }
+
+
+
+            .mobileuser {
+                width: 20px;
+                margin-left: 300px;
+                margin-top: -30px;
+            }
+
+            .mobileuser img {
+                width: 100%;
+            }
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        @media (min-width: 1200px) {
+
+            .web-nav {
+                width: 100%;
+                position: fixed;
+                bottom: 0;
+                top: 0;
+                right: 0;
+                z-index: 1000;
+                will-change: transform;
+                display: flex;
+                height: 60px;
+                box-shadow: 0 -2px 5px -2px #f1be45ab;
+                background-color: #ffde90d7;
+
+            }
+
+
+            .web-nav__item {
+                display: flex;
+                margin: 0 auto;
+                margin-top: 20px;
+                width: fit-content;
+                margin-right: 40px;
+                /* border: 1px solid red; */
+            }
+
+            .web-nav__item-content {
+                margin-right: 10px;
+            }
+
+            .mobile-bottom-nav {
+                display: none;
+                /* position: fixed;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                z-index: 1000;
+                will-change: transform;
+                transform: translateZ(0);
+                display: flex;
+                height: 50px;
+                box-shadow: 0 -2px 5px -2px #f1be45ab;
+                background-color: #FFDD90; */
+            }
+
+
+
+            .home {
+                width: 69.53px;
+            }
+
+            .home img {
+                width: 30%;
+            }
+
+
+
+            .user_wrap {
+                width: 8px;
+                padding: 0;
+                z-index: 1000;
+                position: relative;
+                margin-top: -2px;
+                margin-left: 10px;
+
+            }
+
+            .user img {
+                width: 100%;
+
+
+            }
+
+
+            .navbar-brand {
+                display: flex;
+                width: 100px;
+                height: 50px;
+                margin: 0 auto;
+                margin-left: 80px;
+                padding: 10px 10px;
+                margin-top: -14px;
+                margin-left: -1400px;
+                z-index: 1000;
+                position: absolute;
+
+
+            }
+
+            .navbar-brand img {
+                width: 100%;
+                height: auto;
+            }
+
+            .login_wrap {
+                display: flex;
+            }
+
+            .login {
+
+                font-size: 12px;
+                font-family: 'Poppins', sans-serif;
+                font-weight: normal;
+                color: #ffffff;
+                width: 70px;
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+                margin: 0 auto;
+                letter-spacing: 0.4px;
+                border-radius: 20px;
+                margin-left: 260px;
+                border: 1px solid rgba(255, 255, 255, 0.452);
+            }
+
+            .signup {
+                margin-left: 0;
+
+            }
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- nav -->
+    <div class="navbar-brand"><img src="./images/logo2.svg" alt="">
+        <div class="mobileuser"><img src="./images/user2.svg" alt="">
+        </div>
+    </div>
+
+    <nav class="mobile-bottom-nav">
+
+        <div class="mobile-bottom-nav__item mobile-bottom-nav__item--active">
+            <div class="mobile-bottom-nav__item-content">
+
+                <div class="home">
+                    <a href="https://codepen.io/DylanBarnett/pen/QzRwxW"> <img src="./images/home.svg" alt=""></a>
+                </div>
+
+            </div>
+        </div>
+        <div class="mobile-bottom-nav__item">
+            <div class="mobile-bottom-nav__item-content">
+                <div class="home">
+                    <a href="https://codepen.io/DylanBarnett/pen/QzRwxW"><img src="./images/search.svg" alt=""></a>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-bottom-nav__item">
+            <div class="mobile-bottom-nav__item-content">
+                <div class="home"><a href="https://codepen.io/DylanBarnett/pen/QzRwxW"><img src="./images/library.svg"
+                            alt=""></a></div>
+            </div>
+        </div>
+
+        <div class="mobile-bottom-nav__item">
+            <div class="mobile-bottom-nav__item-content">
+                <div class="home"> <a href="https://codepen.io/DylanBarnett/pen/QzRwxW"><img src="./images/playlist.svg"
+                            alt=""></a></div>
+            </div>
+        </div>
+        <div class="mobile-bottom-nav__item">
+            <div class="mobile-bottom-nav__item-content">
+                <div class="home"><a href="https://codepen.io/DylanBarnett/pen/QzRwxW"><img src="./images/heart.svg"
+                            alt=""></a></div>
+            </div>
+        </div>
+
+
+
+    </nav>
+    <!-- nav -->
+
+    <nav class="web-nav">
+        <div class="web-nav__item web-nav__item--active">
+
+            <nav class="navbar">
+                <div class="navbar-brand" href="#">
+
+                    <img src="./images/logo.svg" alt="">
+
+
+                </div>
+                <!-- <div class="user_wrap">
+                    <img class="user" src="./images/user.svg" alt="">
+                </div> -->
+            </nav>
+
+
+
+            <div class="web-nav__item-content">
+
+                <div class="home">
+                    <a href="https://codepen.io/DylanBarnett/pen/QzRwxW"><img src="./images/search.svg" alt=""></a>
+                </div>
+            </div>
+
+
+            <div class="web-nav__item-content">
+
+                <div class="home"><a href="https://codepen.io/DylanBarnett/pen/QzRwxW"><img src="./images/library.svg"
+                            alt=""></a>
+
+                </div>
+            </div>
+
+
+            <div class="web-nav__item-content">
+
+                <div class="home"> <a href="https://codepen.io/DylanBarnett/pen/QzRwxW"><img src="./images/playlist.svg"
+                            alt=""></a></div>
+
+            </div>
+
+
+
+            <div class="web-nav__item-content">
+
+                <div class="home"><a href="https://codepen.io/DylanBarnett/pen/QzRwxW"><img src="./images/heart.svg"
+                            alt=""></a></div>
+
+            </div>
+            <div class="web-nav__item-content">
+
+                <div class="home"><a href="https://codepen.io/DylanBarnett/pen/QzRwxW"><img src="./images/user.svg"
+                            alt="" height="22px"></a></div>
+
+            </div>
+
+        </div>
+    </nav>
+
+
+
+    <!-- linear-gradient bg -->
+    <div class="jumbotron jumbotron-fluid">
+        <!-- Just an image -->
+
+
+
+
+
+
+    </div>
+    <!-- linear-gradient bg -->
+
+
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

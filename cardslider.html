@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>card slider</title>
+    <style>
+        * {
+            outline: none;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+
+
+        .box-container {
+            display: flex;
+            width: 100%;
+            height: 100vh;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
+            background: #fff;
+            /*%%%%%%%%
+   %% CARD %%
+   %%%%%%%%*/
+            /*%% End card %%*/
+        }
+
+        .box-container .card {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+
+            width: 450px;
+            height: 600px;
+            background-color: #ffffff;
+            border: 1px solid #e4e4e4;
+            box-shadow: 0 1px 4px 0 rgb(0 0 0 / 10%);
+        }
+
+        .box-container .card:before {
+            content: '';
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: 0;
+            background: #DEBBB0;
+            transition: all 0.5s ease;
+        }
+
+      
+
+        .box-container .card:hover:before {
+            height: 180px;
+        }
+
+        .box-container .card:hover .social {
+            margin-top: 50px;
+        }
+
+        .box-container .card:hover .pic {
+            width: 120px;
+            height: 120px;
+            margin-top: 50px;
+            box-shadow: 0px 0px 10px 1px #888;
+        }
+
+        .box-container .card:hover .content {
+            margin-top: 90px;
+        }
+
+        .box-container .card .social {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            height: 0;
+            margin-top: -30px;
+            text-align: center;
+            transition: margin-top 0.5s ease;
+        }
+
+        .box-container .card .social a {
+            text-decoration: none;
+            color: #2d3436;
+            padding: 8px;
+            font-size: 18px;
+            color: #fff;
+
+        }
+
+        .box-container .card .pic {
+            position: relative;
+            left: 50%;
+            top: 15%;
+            transform: translateX(-50%);
+            width: 230px;
+            height: 230px;
+            overflow: hidden;
+            transition: all 0.5s ease;
+            border-radius: 10px;
+            background: #fff;
+            box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .box-container .card .pic img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+
+        .box-container .card .content {
+            margin-top: 90px;
+            text-align: center;
+            padding: 0 30px;
+            color: #2d3436;
+            transition: margin-top 0.5s ease;
+        }
+
+        .box-container .card .content .title {
+            margin-bottom: 0;
+            font-family: 'Yantramanav', sans-serif;
+            font-size: 22px;
+        }
+
+        .box-container .card .content span {
+            font-size: 12px;
+            letter-spacing: 1.5px;
+        }
+
+        .box-container .card .content p {
+            margin: 20px 0;
+            font-size: 12px;
+            line-height: 1.6;
+            color: #b0b0b0;
+        }
+
+        /*%% End container %%*/
+    </style>
+</head>
+
+<body>
+    <div uk-slider="center: true">
+
+        <div class="uk-position-relative uk-visible-toggle uk-dark" tabindex="-1">
+
+            <ul class="uk-slider-items uk-child-width-1-2@s uk-child-width-1-4@l uk-child-width-1-4@m uk-grid">
+
+                <div class="uk-panel">
+                    <div class="box-container">
+                        <div class="card">
+                            <div class="social">
+
+                            </div>
+                            <div class="pic">
+                            </div>
+                            <div class="content">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+        </div>
+
+        <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
+
+    </div>
+</body>
+
+</html>

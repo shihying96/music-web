@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>page2</title>
+    <style>
+        * {
+            margin: 0;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-family: 'Poppins', sans-serif;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 200%;
+        }
+
+        html {
+            height: 100%;
+        }
+
+
+
+
+        .jumbotron {
+            /* background: linear-gradient(to top, #fad98c 30%, #f8f6ca); */
+            /* background-image: linear-gradient(to bottom, #ffedb7, #fffef9 70%, #fffde9, #ffedb5); */
+            height: 200%;
+            position: relative;
+            background-color: #fffdeb;
+
+        }
+
+        @keyframes bganimation {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+
+        .jumbotron .jumbotron-fluid {
+            padding: 0;
+        }
+
+
+
+
+
+        /* Lazy Load Styles */
+        .card-image {
+            display: block;
+            min-height: 20rem;
+            /* layout hack */
+            background: #fff center center no-repeat;
+            background-size: cover;
+            filter: blur(3px);
+            /* blur the lowres image */
+        }
+
+        .card-image>img {
+            display: block;
+            width: 100%;
+            opacity: 0;
+            /* visually hide the img element */
+        }
+
+        .card-image.is-loaded {
+            filter: none;
+            /* remove the blur on fullres image */
+            transition: filter 1s;
+        }
+
+
+
+
+        /* Layout Styles */
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            font-size: 16px;
+            font-family: sans-serif;
+        }
+
+        .card-list {
+            display: block;
+            margin: 1rem auto;
+            padding: 0;
+            font-size: 0;
+            text-align: center;
+            list-style: none;
+        }
+
+        .card {
+            display: inline-block;
+            width: 90%;
+            max-width: 20rem;
+            margin: 1rem;
+            font-size: 1rem;
+            text-decoration: none;
+            overflow: hidden;
+            box-shadow: 0 0 3rem -1rem rgba(0, 0, 0, 0.5);
+            transition: transform 0.1s ease-in-out, box-shadow 0.1s;
+        }
+
+        .card:hover {
+            transform: translateY(-0.5rem) scale(1.0125);
+            box-shadow: 0 0.5em 3rem -1rem rgba(0, 0, 0, 0.5);
+        }
+
+        .card-description {
+            display: block;
+            padding: 1em 0.5em;
+            color: #515151;
+            text-decoration: none;
+        }
+
+        .card-description>h2 {
+            margin: 0 0 0.5em;
+        }
+
+        .card-description>p {
+            margin: 0;
+        }
+
+
+
+        body {
+            height: 100%;
+        }
+
+        html {
+            height: 100%;
+        }
+
+
+
+
+        @media (max-width: 375px) {
+            .jumbotron {
+                /* background: linear-gradient(to top, #fad98c 30%, #f8f6ca); */
+                /* background-image: linear-gradient(to bottom, #ffedb7, #fffef9 70%, #fffde9, #ffedb5); */
+
+                height: 100%;
+                position: relative;
+
+            }
+
+
+
+            .mobile-bottom-nav {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                z-index: 1000;
+                will-change: transform;
+                transform: translateZ(0);
+                display: flex;
+                height: 50px;
+                box-shadow: 0 -2px 5px -2px #f1be45ab;
+                background-color: #ffde90d7;
+            }
+
+            .mobile-bottom-nav__item {
+                flex-grow: 1;
+                text-align: center;
+                font-size: 12px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            .mobile-bottom-nav__item--active {
+                color: #fff;
+            }
+
+            .mobile-bottom-nav__item-content {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .home {
+                width: 69.53px;
+            }
+
+            .home img {
+                width: 30%;
+            }
+
+            .navbar {
+                position: fixed;
+                top: 0;
+                /* Position the navbar at the top of the page */
+                width: 100%;
+
+            }
+
+            .user_wrap {
+                width: 16px;
+                float: right;
+                padding: 0;
+                position: absolute;
+                z-index: 2;
+                margin-top: 24px;
+                margin-left: 330px;
+            }
+
+            .user img {
+                width: 100%;
+
+            }
+
+
+            .navbar-brand {
+                position: absolute;
+                z-index: 2;
+                width: 100px;
+                height: 50px;
+                margin: 0 auto;
+                margin-left: 10px;
+                padding: 10px 10px;
+                margin-top: 10px;
+
+            }
+
+
+            .navbar-brand img {
+                width: 100%;
+                height: auto;
+
+
+            }
+
+            .login_wrap {
+                display: flex;
+            }
+
+            .login {
+
+                font-size: 12px;
+                font-family: 'Poppins', sans-serif;
+                font-weight: normal;
+                color: #ffffff;
+                width: 70px;
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+                margin: 0 auto;
+                letter-spacing: 0.4px;
+                border-radius: 20px;
+                margin-left: 260px;
+                border: 1px solid rgba(255, 255, 255, 0.452);
+            }
+
+            .signup {
+                margin-left: 0;
+
+            }
+
+            .mobileuser {
+                width: 20px;
+                margin-left: 300px;
+                margin-top: -30px;
+            }
+
+            .mobileuser img {
+                width: 100%;
+            }
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        @media (min-width: 1200px) {
+
+            .web-nav {
+                width: 100%;
+                position: fixed;
+                bottom: 0;
+                top: 0;
+                right: 0;
+                z-index: 1000;
+                will-change: transform;
+                display: flex;
+                height: 60px;
+                box-shadow: 0 -2px 5px -2px #f1be45ab;
+                background-color: #ffde90d7;
+
+            }
+
+
+            .web-nav__item {
+                display: flex;
+                margin: 0 auto;
+                margin-top: 20px;
+                width: fit-content;
+                margin-right: 40px;
+                /* border: 1px solid red; */
+            }
+
+            .web-nav__item-content {
+                margin-right: 10px;
+            }
+
+            .mobile-bottom-nav {
+                display: none;
+                /* position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    will-change: transform;
+    transform: translateZ(0);
+    display: flex;
+    height: 50px;
+    box-shadow: 0 -2px 5px -2px #f1be45ab;
+    background-color: #FFDD90; */
+            }
+
+
+
+            .home {
+                width: 69.53px;
+            }
+
+            .home img {
+                width: 30%;
+            }
+
+
+
+            .user_wrap {
+                width: 8px;
+                padding: 0;
+                z-index: 1000;
+                position: relative;
+                margin-top: -2px;
+                margin-left: 10px;
+
+            }
+
+            .user img {
+                width: 100%;
+
+
+            }
+
+
+            .navbar-brand {
+                display: flex;
+                width: 100px;
+                height: 50px;
+                margin: 0 auto;
+                margin-left: 80px;
+                padding: 10px 10px;
+                margin-top: -14px;
+                margin-left: -1400px;
+                z-index: 1000;
+                position: absolute;
+
+
+            }
+
+            .navbar-brand img {
+                width: 100%;
+                height: auto;
+            }
+
+            .login_wrap {
+                display: flex;
+            }
+
+            .login {
+
+                font-size: 12px;
+                font-family: 'Poppins', sans-serif;
+                font-weight: normal;
+                color: #ffffff;
+                width: 70px;
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+                margin: 0 auto;
+                letter-spacing: 0.4px;
+                border-radius: 20px;
+                margin-left: 260px;
+                border: 1px solid rgba(255, 255, 255, 0.452);
+            }
+
+            .signup {
+                margin-left: 0;
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- nav -->
+    <div class="navbar-brand"><img src="./images/logo2.svg" alt="">
+        <div class="mobileuser"><img src="./images/user2.svg" alt="">
+        </div>
+    </div>
+
+    <nav class="mobile-bottom-nav">
+
+        <div class="mobile-bottom-nav__item mobile-bottom-nav__item--active">
+            <div class="mobile-bottom-nav__item-content">
+
+                <div class="home">
+                    <a href="https://codepen.io/DylanBarnett/pen/QzRwxW"> <img src="./images/home.svg" alt=""></a>
+                </div>
+
+            </div>
+        </div>
+        <div class="mobile-bottom-nav__item">
+            <div class="mobile-bottom-nav__item-content">
+                <div class="home">
+                    <a href="https://codepen.io/DylanBarnett/pen/QzRwxW"><img src="./images/search.svg" alt=""></a>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-bottom-nav__item">
+            <div class="mobile-bottom-nav__item-content">
+                <div class="home"><a href="https://codepen.io/DylanBarnett/pen/QzRwxW"><img src="./images/library.svg"
+                            alt=""></a></div>
+            </div>
+        </div>
+
+        <div class="mobile-bottom-nav__item">
+            <div class="mobile-bottom-nav__item-content">
+                <div class="home"> <a href="https://codepen.io/DylanBarnett/pen/QzRwxW"><img src="./images/playlist.svg"
+                            alt=""></a></div>
+            </div>
+        </div>
+        <div class="mobile-bottom-nav__item">
+            <div class="mobile-bottom-nav__item-content">
+                <div class="home"><a href="https://codepen.io/DylanBarnett/pen/QzRwxW"><img src="./images/heart.svg"
+                            alt=""></a></div>
+            </div>
+        </div>
+
+
+
+    </nav>
+    <!-- nav -->
+
+
+    <!-- <ul class="card-list">
+
+        <li class="card">
+            <a class="card-image" href="https://michellezauner.bandcamp.com/album/psychopomp-2" target="_blank"
+                style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/psychopomp-100.jpg);"
+                data-image-full="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/psychopomp-500.jpg">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/psychopomp-100.jpg" alt="Psychopomp" />
+            </a>
+            <a class="card-description" href="https://michellezauner.bandcamp.com/album/psychopomp-2" target="_blank">
+                <h2>Psychopomp</h2>
+                <p>Japanese Breakfast</p>
+            </a>
+        </li>
+
+        <li class="card">
+            <a class="card-image" href="https://inlovewithaghost.bandcamp.com/album/lets-go" target="_blank"
+                style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/lets-go-100.jpg);"
+                data-image-full="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/lets-go-500.jpg">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/lets-go-100.jpg" alt="let's go" />
+            </a>
+            <a class="card-description" href="https://inlovewithaghost.bandcamp.com/album/lets-go" target="_blank">
+                <h2>let's go</h2>
+                <p>In Love With A Ghost</p>
+            </a>
+        </li>
+
+        <li class="card">
+            <a class="card-image" href="https://vulfpeck.bandcamp.com/album/the-beautiful-game" target="_blank"
+                style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/beautiful-game-100.jpg);"
+                data-image-full="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/beautiful-game-500.jpg">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/beautiful-game-100.jpg"
+                    alt="The Beautiful Game" />
+            </a>
+            <a class="card-description" href="https://vulfpeck.bandcamp.com/album/the-beautiful-game" target="_blank">
+                <h2>The Beautiful Game</h2>
+                <p>Vulfpeck</p>
+            </a>
+        </li>
+
+        <li class="card">
+            <a class="card-image" href="https://convergecult.bandcamp.com/album/jane-doe" target="_blank"
+                style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/jane-doe-100.jpg);"
+                data-image-full="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/jane-doe-500.jpg">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/jane-doe-100.jpg" alt="Jane Doe" />
+            </a>
+            <a class="card-description" href="https://convergecult.bandcamp.com/album/jane-doe" target="_blank">
+                <h2>Jane Doe</h2>
+                <p>Converge</p>
+            </a>
+        </li>
+
+    </ul> -->
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+
+    <script>// This is "probably" IE9 compatible but will need some fallbacks for IE8
+        // - (event listeners, forEach loop)
+
+        // wait for the entire page to finish loading
+        window.addEventListener('load', function () {
+
+            // setTimeout to simulate the delay from a real page load
+            setTimeout(lazyLoad, 1000);
+
+        });
+
+        function lazyLoad() {
+            var card_images = document.querySelectorAll('.card-image');
+
+            // loop over each card image
+            card_images.forEach(function (card_image) {
+                var image_url = card_image.getAttribute('data-image-full');
+                var content_image = card_image.querySelector('img');
+
+                // change the src of the content image to load the new high res photo
+                content_image.src = image_url;
+
+                // listen for load event when the new photo is finished loading
+                content_image.addEventListener('load', function () {
+                    // swap out the visible background image with the new fully downloaded photo
+                    card_image.style.backgroundImage = 'url(' + image_url + ')';
+                    // add a class to remove the blur filter to smoothly transition the image change
+                    card_image.className = card_image.className + ' is-loaded';
+                });
+
+            });
+
+        }
+
+    </script>
+</body>
+
+</html>

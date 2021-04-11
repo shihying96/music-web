@@ -1,0 +1,3026 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>loop</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500&family=Poppins:wght@200;300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Allerta' rel='stylesheet'>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <style>
+        * {
+            margin: 0;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-family: 'Poppins', sans-serif;
+            box-sizing: border-box;
+            outline: none !important;
+            ;
+
+        }
+
+        body {
+            height: 200%;
+        }
+
+        html {
+            height: 100%;
+        }
+
+
+
+
+        .jumbotron {
+            /* background: linear-gradient(to top, #fad98c 30%, #f8f6ca); */
+            /* background-image: linear-gradient(to bottom, #ffedb7, #fffef9 70%, #fffde9, #ffedb5); */
+            height: 120%;
+            position: relative;
+            background-color: #fafafa;
+
+        }
+
+        @keyframes bganimation {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+
+        .jumbotron .jumbotron-fluid {
+            padding: 0;
+        }
+
+
+
+
+
+
+
+        @media (max-width: 375px) {
+            body {
+                height: 100%;
+            }
+
+            html {
+                height: 100%;
+            }
+
+
+
+
+            .jumbotron {
+                /* background: linear-gradient(to top, #fad98c 30%, #f8f6ca); */
+                /* background-image: linear-gradient(to bottom, #ffedb7, #fffef9 70%, #fffde9, #ffedb5); */
+
+                height: 100%;
+                position: relative;
+                background-color: #FAFAFA;
+            }
+
+            .web-nav {
+                display: none;
+            }
+
+
+
+
+
+            .mobile-bottom-nav {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                z-index: 1000;
+                will-change: transform;
+                transform: translateZ(0);
+                display: flex;
+                height: 50px;
+                box-shadow: 0 -2px 5px -2px #f1be45ab;
+                background-color: #ffde90d7;
+            }
+
+            .mobile-bottom-nav__item {
+                flex-grow: 1;
+                text-align: center;
+                font-size: 12px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            .mobile-bottom-nav__item--active {
+                color: #fff;
+            }
+
+            .mobile-bottom-nav__item-content {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .home {
+                width: 69.53px;
+            }
+
+            .home img {
+                width: 30%;
+            }
+
+            .navbar {
+                position: fixed;
+                top: 0;
+                /* Position the navbar at the top of the page */
+                width: 100%;
+
+            }
+
+            .user_wrap {
+                width: 16px;
+                float: right;
+                padding: 0;
+                position: absolute;
+                z-index: 2;
+                margin-top: 24px;
+                margin-left: 330px;
+            }
+
+            .user img {
+                width: 100%;
+
+            }
+
+
+            .navbar-brand {
+                display: none;
+                position: absolute;
+                z-index: 2;
+                width: 100px;
+                height: 50px;
+                margin: 0 auto;
+                margin-left: 10px;
+                padding: 10px 10px;
+                margin-top: 10px;
+
+            }
+
+            .navbar-brand img {
+                width: 100%;
+                height: 100%;
+
+
+            }
+
+            .login_wrap {
+                display: flex;
+            }
+
+            .login {
+
+                font-size: 12px;
+                font-family: 'Poppins', sans-serif;
+                font-weight: normal;
+                color: #ffffff;
+                width: 70px;
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+                margin: 0 auto;
+                letter-spacing: 0.4px;
+                border-radius: 20px;
+                margin-left: 260px;
+                border: 1px solid rgba(255, 255, 255, 0.452);
+            }
+
+            .signup {
+                margin-left: 0;
+
+            }
+
+
+            .slider_title {
+                font-family: 'Poppins', sans-serif;
+                font-size: 19px;
+                font-weight: 500px;
+                letter-spacing: 0.15px;
+                color: rgb(70, 70, 70);
+                margin-bottom: 20px;
+                margin-left: -200px;
+            }
+
+            .slider {
+                text-align: center;
+                overflow: hidden;
+                margin-top: 40px;
+            }
+
+            .slides {
+                display: flex;
+                overflow-x: auto;
+                scroll-snap-type: x mandatory;
+                scroll-behavior: smooth;
+                -webkit-overflow-scrolling: touch;
+
+            }
+
+            .slides::-webkit-scrollbar {
+                width: 8px;
+                height: 6px;
+            }
+
+            .slides::-webkit-scrollbar-thumb {
+                /* background: #FF986A; */
+                border-radius: 10px;
+            }
+
+            .slides::-webkit-scrollbar-track {
+                background: transparent;
+
+            }
+
+            .slides>div {
+                scroll-snap-align: start;
+                flex-shrink: 0;
+                width: 150px;
+                height: 150px;
+                box-shadow: 3px 3px 12px#0000007a;
+                margin-right: 15px;
+                margin-bottom: 70px;
+                border-radius: 10px;
+                transform-origin: center center;
+                transform: scale(1);
+                transition: transform 0.5s;
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 100px;
+            }
+
+
+
+            .slider>a {
+                display: inline-flex;
+                width: 1.5rem;
+                height: 1.5rem;
+                background: white;
+                text-decoration: none;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                margin: 0 0 0.5rem 0;
+                position: relative;
+            }
+
+            .slider>a:active {
+                top: 1px;
+            }
+
+            .slider>a:focus {
+                background: #000;
+            }
+
+            .slide-1 {
+                background: url(./images/sia.jpg) center;
+                background-size: cover;
+            }
+
+            .slide-1>div {
+                font-size: 15px;
+                font-weight: 400;
+                letter-spacing: 0.15px;
+                margin-top: 220px;
+
+            }
+
+            .slide-1>.text {
+
+                font-size: 15px;
+                font-weight: 400;
+                letter-spacing: 0.15px;
+                margin-top: 250px;
+                margin-left: -90px;
+                width: fit-content;
+            }
+
+            .text span {
+
+                font-size: 12px;
+                letter-spacing: 0.4px;
+                font-weight: 400;
+
+            }
+
+            .imgiu {
+                background: url(./images/iu.jpg) center;
+                background-size: cover;
+            }
+
+            .imgzuto {
+                background: url(./images/ZUTOMAYO.jpg) center;
+                background-size: cover;
+            }
+
+            .imgSoulFa {
+                background: url(./images/soul.jpg) center;
+                background-size: cover;
+            }
+
+            .imgchungha {
+                background: url(./images/CHUNG\ HA.jpg) center;
+                background-size: cover;
+            }
+
+            .imgkiro {
+                background: url(./images/kiro.jpg) center;
+                background-size: cover;
+            }
+
+            .imgsam {
+                background: url(./images/samsmith.jpg) center;
+                background-size: cover;
+            }
+
+            .text span {
+                margin-left: -25px;
+            }
+
+            .wrap_text {
+                margin-bottom: -20px;
+                margin-left: -95px;
+            }
+
+            .imgiu .text {
+                margin-left: 20px;
+            }
+
+            .imgiu .text span {
+                margin-left: -55px;
+            }
+
+            .imgzuto .text {
+                margin-left: 5px;
+            }
+
+            .imgzuto .text span {
+                margin-left: 15px;
+            }
+
+            .imgSoulFa .text {
+                margin-left: 60px;
+            }
+
+            .imgSoulFa .text span {
+                margin-left: -12px;
+                font-family: 'Noto Sans TC', sans-serif;
+            }
+
+            .imgchungha .text {
+                margin-left: 30px;
+            }
+
+            .imgchungha .text span {
+                margin-left: -12px;
+            }
+
+            .imgsam .text {
+                margin-left: -25px;
+            }
+
+            .imgsam .text span {
+                margin-left: 40px;
+            }
+
+            .imgkiro .text {
+                margin-left: 20px;
+            }
+
+            .imgkiro .text span {
+                margin-left: 12px;
+            }
+
+
+
+            .slider2 {
+                margin-top: 30px;
+            }
+
+            .imggen {
+                background: url(./images/Gen\ Hoshino.jpg) center;
+                background-size: cover;
+            }
+
+            .imggen .text {
+                margin-left: 10px;
+            }
+
+            .imggen .text span {
+                margin-left: 28px;
+            }
+
+            .imgthefin {
+                background: url(./images/The\ fin..jpg) center;
+                background-size: cover;
+            }
+
+            .imgthefin .text {
+                margin-left: 15px;
+            }
+
+            .imgsaka {
+                background: url(./images/flower.jpg) center;
+                background-size: cover;
+            }
+
+            .imgsaka .text {
+                margin-left: -10px;
+                font-family: 'Noto Sans TC', sans-serif;
+            }
+
+            .imgsaka .text span {
+                margin-left: 35px;
+
+            }
+
+            .img1975 {
+                background: url(./images/1975.jpg) center;
+                background-size: cover;
+            }
+
+            .img1975 .text {
+                margin-left: 60px;
+            }
+
+            .img1975 .text span {
+                margin-left: -55px;
+            }
+
+            .imgsasha {
+                background: url(./images/sasha.jpg) center;
+                background-size: cover;
+            }
+
+            .imgsasha .text {
+                margin-left: 20px;
+
+            }
+
+            .imgsasha .text span {
+                margin-left: 10px;
+
+            }
+
+            .recent {
+                margin-left: -180px;
+            }
+
+            .web_slider_title {
+                display: none;
+            }
+
+            #container {
+                display: none;
+            }
+
+            .video_wrap {
+                display: none;
+            }
+
+            .carou {
+                display: none;
+            }
+
+            .mobileuser {
+                width: 20px;
+                margin-left: 300px;
+                margin-top: -30px;
+            }
+
+            .mobileuser img {
+                width: 100%;
+            }
+
+            #slider {
+                display: none;
+            }
+
+            .play-music {
+                display: flex;
+                position: absolute;
+                bottom: 50px;
+                left: 50px;
+                z-index: 50;
+            }
+
+
+
+            .music-toggle {
+                cursor: pointer;
+                font-size: 60px;
+                position: relative;
+                color: transparent;
+                margin-left: 10px;
+                text-decoration: none;
+
+            }
+
+            a {
+                color: transparent;
+                text-decoration: none;
+
+            }
+
+            a:focus,
+            a:hover {
+                color: transparent;
+                text-decoration: none;
+
+            }
+
+            .bar {
+                width: 1px;
+                background-color: #000;
+                height: 2px;
+                display: block;
+                margin: 0 1px;
+            }
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        @media (min-width: 1200px) {
+
+            .web-nav {
+                width: 100%;
+                position: fixed;
+                bottom: 0;
+                top: 0;
+                right: 0;
+                z-index: 1000;
+                will-change: transform;
+                display: flex;
+                height: 60px;
+                box-shadow: 0 -2px 5px -2px #f1be45ab;
+                background-color: #FFDF93;
+
+            }
+
+
+            .web-nav__item {
+                display: flex;
+                margin: 0 auto;
+                margin-top: 20px;
+                width: fit-content;
+                margin-right: 40px;
+                /* border: 1px solid red; */
+            }
+
+            .web-nav__item-content {
+                margin-right: 10px;
+            }
+
+            .mobile-bottom-nav {
+                display: none;
+                /* position: fixed;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                z-index: 1000;
+                will-change: transform;
+                transform: translateZ(0);
+                display: flex;
+                height: 50px;
+                box-shadow: 0 -2px 5px -2px #f1be45ab;
+                background-color: #FFDD90; */
+            }
+
+
+
+            .home {
+                width: 69.53px;
+            }
+
+            .home img {
+                width: 30%;
+            }
+
+
+
+            .user_wrap {
+                width: 8px;
+                padding: 0;
+                z-index: 1000;
+                position: relative;
+                margin-top: -2px;
+                margin-left: 10px;
+
+            }
+
+            .user img {
+                width: 100%;
+
+
+            }
+
+
+            .navbar-brand {
+                display: flex;
+                width: 100px;
+                height: 50px;
+                margin: 0 auto;
+                margin-left: 80px;
+                padding: 10px 10px;
+                margin-top: -18px;
+                margin-left: -1400px;
+                z-index: 1000;
+                position: absolute;
+
+
+            }
+
+            .navbar-brand img {
+                width: 100%;
+                height: auto;
+            }
+
+            .login_wrap {
+                display: flex;
+            }
+
+            .login {
+
+                font-size: 12px;
+                font-family: 'Poppins', sans-serif;
+                font-weight: normal;
+                color: #ffffff;
+                width: 70px;
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+                margin: 0 auto;
+                letter-spacing: 0.4px;
+                border-radius: 20px;
+                margin-left: 260px;
+                border: 1px solid rgba(255, 255, 255, 0.452);
+            }
+
+            .signup {
+                margin-left: 0;
+
+            }
+
+            .slider {
+                display: none;
+            }
+
+            .slider_title {
+                font-family: 'Poppins', sans-serif;
+                font-size: 19px;
+                font-weight: 500px;
+                letter-spacing: 0.15px;
+                color: rgb(70, 70, 70);
+                margin-bottom: 20px;
+                margin-left: -200px;
+            }
+
+            .slider {
+                text-align: center;
+                overflow: hidden;
+                margin-top: 80px;
+            }
+
+            .slides {
+                display: flex;
+                overflow-x: auto;
+                margin-left: 400px;
+                scroll-snap-type: x mandatory;
+                scroll-behavior: smooth;
+                -webkit-overflow-scrolling: touch;
+
+            }
+
+            .slides::-webkit-scrollbar {
+                width: 8px;
+                height: 6px;
+            }
+
+            .slides::-webkit-scrollbar-thumb {
+                /* background: #FF986A; */
+                border-radius: 10px;
+            }
+
+            .slides::-webkit-scrollbar-track {
+                background: transparent;
+
+            }
+
+            .slides>div {
+                scroll-snap-align: start;
+                flex-shrink: 0;
+                width: 150px;
+                height: 150px;
+                box-shadow: 3px 3px 12px#0000007a;
+                margin-right: 15px;
+                margin-bottom: 70px;
+                border-radius: 10px;
+                transform-origin: center center;
+                transform: scale(1);
+                transition: transform 0.5s;
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 100px;
+            }
+
+
+
+            .slider>a {
+                display: inline-flex;
+                width: 1.5rem;
+                height: 1.5rem;
+                background: white;
+                text-decoration: none;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                margin: 0 0 0.5rem 0;
+                position: relative;
+            }
+
+            .slider>a:active {
+                top: 1px;
+            }
+
+            .slider>a:focus {
+                background: #000;
+            }
+
+            .slide-1 {
+                background: url(./images/sia.jpg) center;
+                background-size: cover;
+            }
+
+            .slide-1>div {
+                font-size: 15px;
+                font-weight: 400;
+                letter-spacing: 0.15px;
+                margin-top: 220px;
+
+            }
+
+            .slide-1>.text {
+
+                font-size: 15px;
+                font-weight: 400;
+                letter-spacing: 0.15px;
+                margin-top: 250px;
+                margin-left: -90px;
+                width: fit-content;
+            }
+
+            .text span {
+
+                font-size: 12px;
+                letter-spacing: 0.4px;
+                font-weight: 400;
+
+            }
+
+            .imgiu {
+                background: url(./images/iu.jpg) center;
+                background-size: cover;
+            }
+
+            .imgzuto {
+                background: url(./images/ZUTOMAYO.jpg) center;
+                background-size: cover;
+            }
+
+            .imgSoulFa {
+                background: url(./images/soul.jpg) center;
+                background-size: cover;
+            }
+
+            .imgchungha {
+                background: url(./images/CHUNG\ HA.jpg) center;
+                background-size: cover;
+            }
+
+            .imgkiro {
+                background: url(./images/kiro.jpg) center;
+                background-size: cover;
+            }
+
+            .imgsam {
+                background: url(./images/samsmith.jpg) center;
+                background-size: cover;
+            }
+
+            .text span {
+                margin-left: -25px;
+            }
+
+            .wrap_text {
+                margin-bottom: -20px;
+                margin-left: -95px;
+            }
+
+            .imgiu .text {
+                margin-left: 20px;
+            }
+
+            .imgiu .text span {
+                margin-left: -55px;
+            }
+
+            .imgzuto .text {
+                margin-left: 5px;
+            }
+
+            .imgzuto .text span {
+                margin-left: 15px;
+            }
+
+            .imgSoulFa .text {
+                margin-left: 60px;
+            }
+
+            .imgSoulFa .text span {
+                margin-left: -12px;
+                font-family: 'Noto Sans TC', sans-serif;
+            }
+
+            .imgchungha .text {
+                margin-left: 30px;
+            }
+
+            .imgchungha .text span {
+                margin-left: -12px;
+            }
+
+            .imgsam .text {
+                margin-left: -25px;
+            }
+
+            .imgsam .text span {
+                margin-left: 40px;
+            }
+
+            .imgkiro .text {
+                margin-left: 20px;
+            }
+
+            .imgkiro .text span {
+                margin-left: 12px;
+            }
+
+
+
+            .slider2 {
+                margin-top: 30px;
+                display: none;
+            }
+
+            .imggen {
+                background: url(./images/Gen\ Hoshino.jpg) center;
+                background-size: cover;
+            }
+
+            .imggen .text {
+                margin-left: 10px;
+            }
+
+            .imggen .text span {
+                margin-left: 28px;
+            }
+
+            .imgthefin {
+                background: url(./images/The\ fin..jpg) center;
+                background-size: cover;
+            }
+
+            .imgthefin .text {
+                margin-left: 15px;
+            }
+
+            .imgsaka {
+                background: url(./images/flower.jpg) center;
+                background-size: cover;
+            }
+
+            .imgsaka .text {
+                margin-left: -10px;
+                font-family: 'Noto Sans TC', sans-serif;
+            }
+
+            .imgsaka .text span {
+                margin-left: 35px;
+
+            }
+
+            .img1975 {
+                background: url(./images/1975.jpg) center;
+                background-size: cover;
+            }
+
+            .img1975 .text {
+                margin-left: 60px;
+            }
+
+            .img1975 .text span {
+                margin-left: -55px;
+            }
+
+            .imgsasha {
+                background: url(./images/sasha.jpg) center;
+                background-size: cover;
+            }
+
+            .imgsasha .text {
+                margin-left: 20px;
+
+            }
+
+            .imgsasha .text span {
+                margin-left: 10px;
+
+            }
+
+
+
+
+
+            #slider-container {
+                height: 300px;
+                width: 80vw;
+                margin: 0 auto;
+                margin-top: 20px;
+                max-width: 1400px;
+                position: relative;
+                overflow: hidden;
+
+            }
+
+            #slider-container .btn {
+                position: absolute;
+                top: calc(50% - 30px);
+                height: 30px;
+                width: 30px;
+                margin-top: -10px;
+                border-left: 6px solid #ffffff49;
+                border-top: 6px solid#ffffff49;
+
+            }
+
+            #slider-container .btn:hover {
+                transform: scale(1.2);
+            }
+
+
+
+            #slider-container .btn:first-of-type {
+                transform: rotate(-45deg);
+                left: 10px
+            }
+
+            #slider-container .btn:last-of-type {
+                transform: rotate(135deg);
+                right: 10px;
+            }
+
+            #slider-container #slider {
+                display: flex;
+                width: 1000%;
+                height: 80%;
+                transition: all .5s;
+            }
+
+            .slide {
+                height: 215px;
+                margin: auto 10px;
+                border-radius: 20px;
+                box-shadow: 3px 3px 12px#0000007a;
+                background: url(./images/sia.jpg) center center no-repeat;
+                background-size: cover;
+            }
+
+
+
+
+            #slider-container #slider .slide span {
+                color: white;
+                font-size: 150px;
+            }
+
+            #slider {
+                margin-left: 150px;
+            }
+
+            @media only screen and (min-width: 1100px) {
+
+                #slider-container #slider .slide {
+                    width: calc(2.5% - 135px);
+                }
+
+            }
+
+            @media only screen and (max-width: 1100px) {
+
+                #slider-container #slider .slide {
+                    width: calc(3.3333333% - 20px);
+                }
+
+            }
+
+            .web_slider_title {
+                font-family: 'Poppins', sans-serif;
+                font-size: 19px;
+                font-weight: 500px;
+                letter-spacing: 0.15px;
+                color: rgb(70, 70, 70);
+                margin-left: 150px;
+                margin-top: -20px;
+
+            }
+
+            .slideweb {
+                margin-top: 230px;
+                /* border: 1px solid red; */
+                font-family: 'Poppins', sans-serif;
+                font-size: 15px;
+                font-weight: 400;
+                letter-spacing: 0.15px;
+                color: rgb(70, 70, 70);
+            }
+
+            .slideweb_inside {
+                font-size: 12px;
+                letter-spacing: 0.4px;
+                font-weight: 400;
+                font-family: 'Poppins', sans-serif;
+                font-weight: normal;
+            }
+
+            .soultext {
+                font-family: 'Noto Sans TC', sans-serif;
+                font-size: 12px;
+                letter-spacing: 0.4px;
+
+            }
+
+            .video {
+                margin-top: 40px;
+                -webkit-border-radius: 20px;
+                -moz-border-radius: 20px;
+                border-radius: 20px;
+                margin-left: 150px;
+            }
+
+            .video_wrap {
+                display: flex;
+            }
+
+
+            h1 {
+                font-family: 'Open Sans', sans-serif;
+                font-size: 13pt;
+                font-weight: 600;
+                text-transform: uppercase;
+                color: white;
+                cursor: default;
+            }
+
+            h4 {
+                font-family: 'Open Sans', sans-serif;
+                font-size: 8pt;
+                font-weight: 400;
+                cursor: default;
+            }
+
+            h2 {
+                font-family: 'Open Sans', sans-serif;
+                font-size: 13pt;
+                font-weight: 300;
+                color: white;
+                cursor: default;
+            }
+
+            .player {
+                height: 80px;
+                width: 480px;
+                box-shadow: 3px 3px 10px #9292927a;
+                position: absolute;
+                border-radius: 20px;
+                -webkit-touch-callout: none;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+                margin-left: 490px;
+                margin-top: 80px;
+                transform: translate(-50%, -50%);
+                -webkit-transform: translate(-50%, -50%);
+            }
+
+            .player ul {
+                list-style: none;
+
+            }
+
+            .player ul li {
+                display: inline-block;
+            }
+
+            .cover {
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+
+            .cover img {
+                height: 80px;
+                border-radius: 20px;
+                width: 80px;
+            }
+
+            .info h1 {
+                margin-top: 15px;
+                margin-left: 90px;
+                line-height: 0;
+                letter-spacing: 0.1px;
+                font-size: 13px;
+                font-family: 'Poppins', sans-serif;
+            }
+
+            .info h4 {
+                margin-left: 90px;
+                line-height: 20px;
+                color: #636367;
+                font-family: 'Poppins', sans-serif;
+            }
+
+            .info h2 {
+                margin-left: 180px;
+            }
+
+            .button-items {
+                margin-left: 180px;
+            }
+
+            #slidermusic {
+                width: 182px;
+                height: 4px;
+                background: #CCCCCF;
+                border-radius: 2px;
+                margin-left: -90px;
+            }
+
+            #slidermusic div {
+                width: 4px;
+                height: 4px;
+                margin-top: 1px;
+                background: #FF986A;
+                border-radius: 2px;
+            }
+
+            #timer {
+                color: #494b4e;
+                line-height: 0;
+                font-size: 9pt;
+                margin-top: -2px;
+                margin-right: 110px;
+                float: right;
+                font-family: 'Poppins', sans-serif;
+            }
+
+            .controls {
+                margin-top: -35px;
+                margin-left: 150px;
+            }
+
+            .controls svg:nth-child(2) {
+                margin-left: 5px;
+                margin-right: 5px;
+            }
+
+            .play {
+                padding: 0 3px;
+                width: 30px;
+                height: 30px;
+                enable-background: new 0 0 25 25;
+            }
+
+            .play g {
+                stroke: #CCCCCF;
+                stroke-width: 1;
+                stroke-miterlimit: 10;
+            }
+
+            .play g path {
+                fill: #CCCCCF;
+            }
+
+            .play:hover {
+                cursor: pointer;
+            }
+
+            .play:hover g {
+                stroke: #FF986A;
+                cursor: pointer;
+            }
+
+            .play:hover g path {
+                fill: #FF986A;
+                cursor: pointer;
+            }
+
+            .step-backward {
+                width: 18px;
+                height: 18px;
+                enable-background: new 0 0 25 25;
+                margin-bottom: 5px;
+            }
+
+            .step-backward g polygon {
+                fill: #CCCCCF;
+            }
+
+            .step-foreward {
+                width: 18px;
+                height: 18px;
+                enable-background: new 0 0 25 25;
+                margin-bottom: 5px;
+            }
+
+            .step-foreward g polygon {
+                fill: #CCCCCF;
+            }
+
+            .pause {
+                enable-background: new 0 0 25 25;
+                width: 30px;
+                height: 30px;
+                position: absolute;
+                margin-left: -38px;
+                cursor: pointer;
+            }
+
+            .pause rect {
+                fill: white;
+            }
+
+            .pause:hover rect {
+                fill: #FF986A;
+            }
+
+            .step-backward g polygon:hover,
+            .step-foreward g polygon:hover {
+                fill: #FF986A;
+                cursor: pointer;
+            }
+
+            .social {
+                text-align: center;
+            }
+
+            .twitter {
+                color: #bdbdbd;
+                font-family: sans-serif;
+                text-decoration: none;
+            }
+
+            .twitter:hover {
+                color: #ecf0f1;
+            }
+
+            .github {
+                color: #bdbdbd;
+                font-family: sans-serif;
+                text-decoration: none;
+            }
+
+            .github:hover {
+                color: #ecf0f1;
+            }
+
+            p {
+                color: #bdbdbd;
+            }
+
+            #skip {
+                float: right;
+                margin-top: 10px;
+            }
+
+            #skip p {
+                color: #2980b9;
+            }
+
+            #skip p:hover {
+                color: #e74c3c;
+                cursor: pointer;
+            }
+
+            .expend {
+                padding: 0.5px;
+                cursor: pointer;
+            }
+
+            .expend svg:hover g polygon {
+                fill: #ef6dbc;
+            }
+
+            .music2 {
+                margin-top: 200px;
+            }
+
+            .music3 {
+                margin-top: 320px;
+            }
+
+            .web_slider_title .track {
+                margin-left: 0;
+                margin-right: 70px;
+            }
+
+            .barmusic {
+                width: 182px;
+                height: 4px;
+                background: #CCCCCF;
+                border-radius: 2px;
+                margin-left: 90px;
+
+            }
+
+            .musictimer {
+                color: #494b4e;
+                line-height: 0;
+                font-size: 9pt;
+                margin-top: -2px;
+                margin-right: -35px;
+                float: right;
+                font-family: 'Poppins', sans-serif;
+            }
+
+
+
+
+
+            .active>div {
+                display: none;
+            }
+
+            .active>div:first-child {
+                display: block;
+            }
+
+            .card {
+                width: 215px;
+                min-width: 215px;
+                height: 215px;
+                background: url(./images/sia.jpg);
+                background-size: contain;
+                border-radius: 30px;
+                position: relative;
+                z-index: 10;
+                margin: 30px;
+                min-height: 215px;
+                cursor: pointer;
+                transition: all .25s ease;
+                box-shadow: 3px 3px 12px#0000007a;
+            }
+
+            .card:hover {
+                transform: translate(0, -10px);
+                box-shadow: 0px 17px 35px 0px rgba(0, 0, 0, .07);
+            }
+
+            .card h4 {
+                position: absolute;
+                left: 0;
+                top: 0;
+                padding: 15px;
+            }
+
+            .card i {
+                position: absolute;
+                right: 0;
+                top: 0;
+                padding: 15px;
+                font-size: 1.4rem;
+                line-height: 3.2rem;
+            }
+
+            .card .card-text {
+                text-align: center;
+                margin-top: 220px;
+
+            }
+
+            p {
+                font-size: .8rem;
+                opacity: .6;
+                margin-top: 10px;
+            }
+
+            .card .card-img {
+                transform: translate(90px, -10px);
+                margin: 0 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: all .35s ease-out;
+            }
+
+            .card img {
+                height: 180px;
+            }
+
+            .card img.blur {
+                position: absulute;
+                filter: blur(15px);
+                z-index: -1;
+                opacity: .40;
+                transform: translate(-160px, 30px);
+                transition: all .35s ease-out;
+            }
+
+            .card:hover .card-img {
+                transform: translate(70px, -15px);
+            }
+
+            .card:hover .card-img img.blur {
+                transform: translate(-100px, 35px) scale(.85);
+                opacity: .25;
+                filter: blur(20px);
+            }
+
+            .card-content {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                width: 100%;
+                overflow: auto;
+                padding-top: 100px;
+
+                padding-right: 60px;
+                scroll-behavior: smooth;
+            }
+
+            .card-content::-webkit-scrollbar {
+                height: 0px;
+            }
+
+            .card-content:after {
+                content: '';
+                display: block;
+                min-width: 20px;
+                height: 100px;
+                position: relative;
+            }
+
+            .card-content2 {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                width: 100%;
+                overflow: auto;
+                padding-top: 100px;
+
+                padding-right: 60px;
+                scroll-behavior: smooth;
+            }
+
+            .card-content2::-webkit-scrollbar {
+                height: 0px;
+            }
+
+            .card-content2:after {
+                content: '';
+                display: block;
+                min-width: 20px;
+                height: 100px;
+                position: relative;
+            }
+
+
+            .btn {
+                min-width: 60px;
+                margin: auto 30px;
+                margin-top: 440px;
+                height: 60px;
+                border-radius: 20px;
+                background: #fff;
+                border: 0px;
+                outline: none;
+                cursor: pointer;
+                z-index: 9999;
+                box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, .08);
+                transition: all .25s ease;
+            }
+
+            .btn:hover {
+                box-shadow: 0px 17px 35px 0px rgba(0, 0, 0, .07);
+            }
+
+            .btn i {
+                font-size: 1.2rem;
+            }
+
+            .slider10 {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: -315px;
+                width: 100%;
+                height: 90vh;
+                overflow: hidden;
+            }
+
+            .slider10:after {
+                content: '';
+                left: 98px;
+                height: 90vh;
+                position: absolute;
+                width: 150px;
+                z-index: 100;
+
+                pointer-events: none;
+            }
+
+            .slider10:before {
+                content: '';
+                right: 98px;
+                height: 90vh;
+                position: absolute;
+                width: 150px;
+                z-index: 100;
+                pointer-events: none;
+            }
+
+            .slider9 {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: -500px;
+                width: 100%;
+                height: 90vh;
+                overflow: hidden;
+            }
+
+            .slider9:after {
+                content: '';
+                left: 98px;
+                height: 90vh;
+                position: absolute;
+                width: 150px;
+                z-index: 100;
+
+                pointer-events: none;
+            }
+
+            .slider9:before {
+                content: '';
+                right: 98px;
+                height: 90vh;
+                position: absolute;
+                width: 150px;
+                z-index: 100;
+                pointer-events: none;
+            }
+
+            .recent {
+                margin-top: 50px;
+                margin-bottom: 190px;
+            }
+
+            .musicrecentwrap {
+                margin-top: -220px;
+            }
+
+            .webiu {
+                background: url(./images/iu.jpg);
+                background-size: contain;
+            }
+
+            .webzuto {
+                background: url(./images/ZUTOMAYO.jpg);
+                background-size: contain;
+            }
+
+            .websoul {
+                background: url(./images/soul.jpg);
+                background-size: contain;
+            }
+
+            .webchungha {
+                background: url(./images/CHUNG\ HA.jpg);
+                background-size: contain;
+            }
+
+            .websam {
+                background: url(./images/samsmith.jpg);
+                background-size: contain;
+            }
+
+            .webkiro {
+                background: url(./images/kiro.jpg);
+                background-size: contain;
+            }
+
+            .websirup {
+                background: url(./images/sirup.jpg);
+                background-size: contain;
+            }
+
+            .webdua {
+                background: url(./images/dua.jpg);
+                background-size: contain;
+            }
+
+            .webdragon {
+                background: url(./images/dragon.jpg);
+                background-size: contain;
+            }
+
+            .webiro {
+                background: url(./images/iro.jpg);
+                background-size: contain;
+            }
+
+            .webmello {
+                background: url(./images/mello.jpg);
+                background-size: contain;
+            }
+
+            .webtoe {
+                background: url(./images/toe.jpg);
+                background-size: contain;
+            }
+
+
+            .webgen {
+                background: url(./images/Gen\ Hoshino.jpg);
+                background-size: contain;
+            }
+
+            .webthefin {
+                background: url(./images/The\ fin..jpg);
+                background-size: contain;
+            }
+
+            .websaka {
+                background: url(./images/flower.jpg);
+                background-size: contain;
+            }
+
+            .web1975 {
+                background: url(./images/1975.jpg);
+                background-size: contain;
+            }
+
+            .websasha {
+                background: url(./images/sasha.jpg);
+                background-size: contain;
+            }
+
+            .webdeca {
+                background: url(./images/decajoins.jpg);
+                background-size: contain;
+            }
+
+            .webking {
+                background: url(./images/king.jpg);
+                background-size: contain;
+            }
+
+            .webhyukoh {
+                background: url(./images/hyu.jpg);
+                background-size: contain;
+            }
+
+            .webtwenty {
+                background: url(./images/21.jpg);
+                background-size: contain;
+            }
+
+            .webavici {
+                background: url(./images/avicii.jpg);
+                background-size: contain;
+            }
+
+            .webtones {
+                background: url(./images/monkey.jpg);
+                background-size: contain;
+            }
+
+            .webradwimps {
+                background: url(./images/radwimps.jpg);
+                background-size: contain;
+            }
+
+            .webcoldplay {
+                background: url(./images/coldplay.jpg);
+                background-size: contain;
+            }
+
+            .dp-wrap {
+                margin: 100px auto;
+                position: relative;
+                perspective: 1000px;
+                height: 100%;
+            }
+
+            .dp-slider {
+                height: 100%;
+                width: 100%;
+                position: absolute;
+                transform-style: preserve-3d;
+            }
+
+            .dp-slider div {
+                transform-style: preserve-3d;
+            }
+
+            .dp_item {
+                display: block;
+                position: absolute;
+                text-align: center;
+                color: rgb(133, 84, 84);
+                border-radius: 10px;
+                transition: transform 1.2s;
+            }
+
+            .dp-img img {
+                border-left: 1px solid #fff;
+            }
+
+
+
+            #dp-slider .dp_item:first-child {
+                z-index: 10 !important;
+                transform: rotateY(0deg) translateX(0px) !important;
+            }
+
+            .dp_item[data-position="2"] {
+                z-index: 9;
+                transform: rotateY(0deg) translateX(10%) scale(0.9);
+            }
+
+            .dp_item[data-position="3"] {
+                z-index: 8;
+                transform: rotateY(0deg) translateX(20%) scale(0.8);
+            }
+
+            .dp_item[data-position="4"] {
+                z-index: 7;
+                transform: rotateY(0deg) translateX(30%) scale(0.7);
+            }
+
+            #dp-next,
+            #dp-prev {
+                position: absolute;
+                top: 50%;
+                right: 16%;
+                height: 33px;
+                width: 33px;
+                z-index: 10;
+                cursor: pointer;
+            }
+
+            #dp-prev {
+                left: 15px;
+                transform: rotate(180deg);
+            }
+
+            #dp-dots {
+                position: absolute;
+                bottom: 25px;
+                z-index: 12;
+                left: 38%;
+                cursor: default;
+            }
+
+            #dp-dots li {
+                display: inline-block;
+                width: 13px;
+                height: 13px;
+                margin: 5px;
+                background: #fff;
+                border-radius: 50%;
+            }
+
+            #dp-dots li:hover {
+                cursor: pointer;
+                background: #FFDF93;
+                transition: background 0.3s;
+            }
+
+            #dp-dots li.active {
+                background: #FFDF93;
+            }
+
+            .dp_item {
+                width: 80%;
+            }
+
+            .dp-content,
+            .dp-img {
+                text-align: left;
+            }
+
+            .dp_item {
+                display: flex;
+                align-items: center;
+                background: #fff;
+                border-radius: 10px;
+                overflow: hidden;
+                border-top: none;
+            }
+
+            .dp-content {
+                padding-left: 100px;
+                padding-right: 0;
+                display: inline-block;
+                width: 100%;
+            }
+
+            .dp-content h2 {
+                color: #41414b;
+                font-family: Circular Std Bold;
+                font-size: 48px;
+                max-width: 460px;
+                margin-top: 8px;
+                margin-bottom: 0px;
+            }
+
+            .dp-content p {
+                color: #74747f;
+                max-width: 490px;
+                margin-top: 15px;
+                font-size: 22px;
+            }
+
+            .dp-content .site-btn {
+                margin-top: 15px;
+                font-size: 18px;
+                padding: 19px 40px;
+            }
+
+            .dp-img:before {
+                background: -webkit-linear-gradient(-90deg,
+                        rgba(255, 255, 255, 0.25),
+                        rgba(255, 255, 255, 0));
+                background: -o-linear-gradient(-90deg,
+                        rgba(255, 255, 255, 0.25),
+                        rgba(255, 255, 255, 0));
+                background: -moz-linear-gradient(-90deg,
+                        rgba(255, 255, 255, 0.25),
+                        rgba(255, 255, 255, 0));
+                background: linear-gradient(-90deg,
+                        rgba(255, 255, 255, 0.75),
+                        rgba(255, 255, 255, 0));
+                content: "";
+                position: absolute;
+                height: 100%;
+                width: 25%;
+                z-index: 1;
+                top: 0;
+                pointer-events: none;
+                background: -webkit-linear-gradient(-90deg,
+                        rgba(255, 255, 255, 0),
+                        rgba(255, 255, 255, 0.75));
+                background: -o-linear-gradient(-90deg,
+                        rgba(255, 255, 255, 0),
+                        rgba(255, 255, 255, 0.75));
+                background: -moz-linear-gradient(-90deg,
+                        rgba(255, 255, 255, 0),
+                        rgba(255, 255, 255, 0.75));
+                background: linear-gradient(-90deg,
+                        rgba(255, 255, 255, 0),
+                        rgb(255, 255, 255));
+            }
+
+            .dp-img img {
+                object-fit: cover;
+                object-position: right;
+            }
+
+            #dp-slider,
+            .dp-img img {
+                height: 550px;
+
+
+            }
+
+            #dp-slider .dp_item:hover:not(:first-child) {
+                cursor: pointer;
+            }
+
+            .site-btn {
+                color: #fff;
+                font-size: 18px;
+                font-family: 'Poppins', sans-serif;
+                background: #FFDF93;
+                padding: 14px 33px;
+                display: inline-block;
+                border-radius: 50px;
+                position: relative;
+                top: -10px;
+                text-decoration: none;
+            }
+
+            .site-btn:hover {
+                text-decoration: none;
+                color: #fff;
+            }
+
+            .bird-btn {
+                color: #fce7ba;
+                font-size: 18px;
+                font-family: 'Poppins', sans-serif;
+
+                padding: 14px 33px;
+                display: inline-block;
+                border-radius: 50px;
+                border: 1px solid #fce7ba;
+                margin-top: 60px;
+                text-decoration: none;
+            }
+
+            .bird-btn:hover {
+                text-decoration: none;
+                color: #fce7ba;
+            }
+
+            .event_text {
+                font-size: 42px;
+                color: #41414b;
+            }
+
+            .release {
+                margin-top: 70px;
+            }
+
+            .fa-primary {
+                color: #c0c0c0;
+            }
+
+            .fa-secondary {
+                animation: fade 20s infinite ease;
+            }
+
+            .play-music {
+                display: flex;
+                position: absolute;
+                bottom: 50px;
+                left: 50px;
+                z-index: 50;
+            }
+
+
+
+            .music-toggle {
+                cursor: pointer;
+                font-size: 60px;
+                position: relative;
+                color: transparent;
+                margin-left: 10px;
+                text-decoration: none;
+
+            }
+
+            a {
+                color: transparent;
+                text-decoration: none;
+
+            }
+
+            a:focus,
+            a:hover {
+                color: transparent;
+                text-decoration: none;
+
+            }
+
+            .bar {
+                width: 1px;
+                background-color: #000;
+                height: 2px;
+                display: block;
+                margin: 0 1px;
+            }
+
+            .daymusic {
+                display: flex;
+                width: 700px;
+                height: 300px;
+                background-color: rgb(255, 255, 255);
+                border-radius: 20px;
+                margin-top: 40px;
+                margin-left: 150px;
+                border: 1px solid #ececec;
+                box-shadow: 3px 3px 12px#ececec7a;
+            }
+
+            .daybox {
+                width: 250px;
+                height: 250px;
+                margin-top: 20px;
+                margin-left: 35px;
+
+            }
+
+            .daybox img {
+                width: 100%;
+                height: 100%;
+                border-radius: 20px;
+            }
+
+            .daytext {
+                margin-top: 20px;
+                margin-left: 50px;
+                font-size: 18px;
+            }
+
+            .bird {
+                margin-top: 20px;
+            }
+
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- nav -->
+    <div class="navbar-brand"> <a href="./page1.html"><img src="./images/logo2.svg" alt=""></a>
+        <div class="mobileuser"><img src="./images/user2.svg" alt="">
+        </div>
+    </div>
+
+    <nav class="mobile-bottom-nav">
+
+        <div class="mobile-bottom-nav__item mobile-bottom-nav__item--active">
+            <div class="mobile-bottom-nav__item-content">
+
+                <div class="home">
+                    <a href="./page1.html"> <img src="./images/home.svg" alt=""></a>
+                </div>
+
+            </div>
+        </div>
+        <div class="mobile-bottom-nav__item">
+            <div class="mobile-bottom-nav__item-content">
+                <div class="home">
+                    <a href="./page2.html"><img src="./images/search.svg" alt=""></a>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-bottom-nav__item">
+            <div class="mobile-bottom-nav__item-content">
+                <div class="home"><a href="./page3.html"><img src="./images/library.svg" alt=""></a></div>
+            </div>
+        </div>
+
+        <div class="mobile-bottom-nav__item">
+            <div class="mobile-bottom-nav__item-content">
+                <div class="home"> <a href="./musicplayer.html"><img src="./images/playlist.svg" alt=""></a></div>
+            </div>
+        </div>
+        <div class="mobile-bottom-nav__item">
+            <div class="mobile-bottom-nav__item-content">
+                <div class="home"><a href="#"><img src="./images/heart.svg" alt=""></a></div>
+            </div>
+        </div>
+
+
+
+    </nav>
+    <!-- nav -->
+
+    <nav class="web-nav">
+        <div class="web-nav__item web-nav__item--active">
+
+            <nav class="navbar">
+                <div class="navbar-brand">
+                    <a href=""> <img src="./images/logo.svg" alt=""></a>
+
+
+
+                </div>
+                <!-- <div class="user_wrap">
+                    <img class="user" src="./images/user.svg" alt="">
+                </div> -->
+            </nav>
+
+
+
+            <div class="web-nav__item-content">
+
+                <div class="home">
+                    <a href="./page2.html"><img src="./images/search.svg" alt=""></a>
+                </div>
+            </div>
+
+
+            <div class="web-nav__item-content">
+
+                <div class="home"><a href="./page3.html"><img src="./images/library.svg" alt=""></a>
+
+                </div>
+            </div>
+
+
+            <div class="web-nav__item-content">
+
+                <div class="home"> <a href="./musicplayer.html"><img src="./images/playlist.svg" alt=""></a></div>
+
+            </div>
+
+
+
+            <div class="web-nav__item-content">
+
+                <div class="home"><a href="#"><img src="./images/heart.svg" alt=""></a></div>
+
+            </div>
+            <div class="web-nav__item-content">
+
+                <div class="home"><a href="#"><img src="./images/user.svg" alt="" height="22px"></a></div>
+
+            </div>
+
+        </div>
+    </nav>
+
+
+
+    <!-- linear-gradient bg -->
+    <div class="jumbotron jumbotron-fluid">
+        <!-- Just an image -->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+        <div id="slider">
+            <div class="dp-wrap">
+                <div id="dp-slider">
+
+                    <div class="dp_item" data-class="1" data-position="1">
+                        <div class="dp-content">
+
+                            <div class="event_text">GoldenMelody</div>
+                            <p class="event_text_sm"> Lorem ipsum dolor sit, amet consectetur adipisicing elit..</p>
+                            <a href="#" class="site-btn">Read More</a>
+                        </div>
+                        <div class="dp-img">
+                            <img class="img-fluid" src="./images/spring.jfif" alt="investing">
+                        </div>
+                    </div>
+
+                    <div class="dp_item" data-class="2" data-position="2">
+
+                        <div class="dp-content">
+                            <div class="event_text">Jurassic Festival</div>
+                            <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit..</p>
+                            <a href="#" class="site-btn">Read More</a>
+
+                        </div>
+                        <div class="dp-img">
+                            <img class="img-fluid" src="./images/Jurassic Festival.jpg">
+
+                        </div>
+
+                    </div>
+
+                    <div class="dp_item" data-class="3" data-position="3">
+                        <div class="dp-content">
+
+                            <div class="event_text">Dancing With Luna Tour</div>
+                            <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit..</p>
+                            <a href="#" class="site-btn">Read More</a>
+                        </div>
+                        <div class="dp-img">
+                            <img class="img-fluid" src="./images/blue.jfif" alt="investing">
+                        </div>
+                    </div>
+
+                    <div class="dp_item" data-class="4" data-position="4">
+                        <div class="dp-content">
+                            <div class="event_text">The Next Big Thing </div>
+                            <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit..</p>
+                            <a href="#" class="site-btn">Read More</a>
+                        </div>
+                        <div class="dp-img">
+                            <img class="img-fluid" src="./images/bigthing.jfif" alt="investing">
+                        </div>
+                    </div>
+                </div>
+
+                <span id="dp-next">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 51.401 51.401">
+                        <defs>
+                            <style>
+                                .cls-1 {
+                                    fill: none;
+                                    stroke: #FFDF93;
+                                    stroke-miterlimit: 10;
+                                    stroke-width: 7px;
+                                }
+                            </style>
+                        </defs>
+                        <path id="Rectangle_4_Copy" data-name="Rectangle 4 Copy" class="cls-1"
+                            d="M32.246,0V33.178L0,31.953" transform="translate(0.094 25.276) rotate(-45)" />
+                    </svg>
+                </span>
+
+                <span id="dp-prev">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 51.401 51.401">
+                        <defs>
+                            <style>
+                                .cls-1 {
+                                    fill: none;
+                                    stroke: #FFDF93;
+                                    stroke-miterlimit: 10;
+                                    stroke-width: 7px;
+                                }
+                            </style>
+                        </defs>
+                        <path id="Rectangle_4_Copy" data-name="Rectangle 4 Copy" class="cls-1"
+                            d="M32.246,0V33.178L0,31.953" transform="translate(0.094 25.276) rotate(-45)" />
+                    </svg>
+                </span>
+
+                <ul id="dp-dots">
+                    <li data-class="1" class="active"></li>
+                    <li data-class="2"></li>
+                    <li data-class="3"></li>
+                    <li data-class="4"></li>
+                </ul>
+            </div>
+        </div>
+
+
+
+
+        <div class="slider">
+            <div class="slider_title release">New Releases</div>
+            <div class="slides">
+
+                <div class="slide-1">
+                    <div class="wrap_text">
+                        <div class="text">Music<br><span>Sia</span></div>
+                    </div>
+                </div>
+                <div class="slide-1 imgiu">
+                    <div class="wrap_text">
+                        <div class="text">Celebrity<br><span>IU</span>
+                            <div class="play-music">
+                                <div id="music-animation" class="music-animation">
+
+                                </div>
+                                <div class="music-toggle"><a onClick="togglePlay()" id="toggle"
+                                        data-text-swap="Off">Play</a></div>
+                            </div>
+                            <audio id="music" loop="loop" src="./music/IU_ Celebrity.mp3"></audio>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-1 imgzuto">
+                    <div class="wrap_text">
+                        <div class="text">Gusare<br><span>ZUTOMAYO</span></div>
+                    </div>
+                </div>
+                <div class="slide-1 imgSoulFa">
+                    <div class="wrap_text">
+                        <div class="text">Slumber Days<br><span>SoulFa 靈魂沙發 </span></div>
+                    </div>
+                </div>
+                <div class="slide-1 imgchungha">
+                    <div class="wrap_text">
+                        <div class="text">Querencia<br><span>CHUNG HA</span></div>
+                    </div>
+                </div>
+                <div class="slide-1 imgsam">
+                    <div class="wrap_text">
+                        <div class="text">Live<br><span>Sam Smith</span></div>
+                    </div>
+                </div>
+                <div class="slide-1 imgkiro">
+                    <div class="wrap_text">
+                        <div class="text">FIZZY POP<br><span> Kiro Akiyama</span></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- <a href="#slide-1">1</a>
+            <a href="#slide-2">2</a>
+            <a href="#slide-3">3</a>
+            <a href="#slide-4">4</a>
+            <a href="#slide-5">5</a> -->
+        </div>
+
+
+        <div class="slider slider2">
+            <div class="slider_title recent">Recently Played</div>
+            <div class="slides">
+                <div class="slide-1 imggen">
+                    <div class="wrap_text ">
+                        <div class="text">Create<br><span>Gen Hoshino</span></div>
+                    </div>
+                </div>
+                <div class="slide-1 imgthefin">
+                    <div class="wrap_text">
+                        <div class="text">Pale Blue<br><span>The fin.</span></div>
+                    </div>
+                </div>
+                <div class="slide-1 imgsaka">
+                    <div class="wrap_text">
+                        <div class="text">蓮の花<br><span>Sakanaction</span></div>
+                    </div>
+                </div>
+                <div class="slide-1 img1975">
+                    <div class="wrap_text">
+                        <div class="text">Somebody Else<br><span>The 1975s</span></div>
+                    </div>
+                </div>
+                <div class="slide-1 imgsasha">
+                    <div class="wrap_text">
+                        <div class="text">Thoughts
+                            <br><span>Sasha Sloan</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-1 imgsam">
+                    <div class="wrap_text">
+                        <div class="text">Live<br><span>Sam Smith</span></div>
+                    </div>
+                </div>
+                <div class="slide-1 imgkiro">
+                    <div class="wrap_text">
+                        <div class="text">FIZZY POP<br><span> Kiro Akiyama</span></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- <a href="#slide-1">1</a>
+            <a href="#slide-2">2</a>
+            <a href="#slide-3">3</a>
+            <a href="#slide-4">4</a>
+            <a href="#slide-5">5</a> -->
+        </div>
+
+
+
+        <div class="video_wrap">
+            <div class="video1">
+                <div class="web_slider_title">Music Video</div>
+                <iframe class="video" frameborder="0" allowfullscreen="" scrolling="no" allow="autoplay;fullscreen"
+                    width="650" height="300"
+                    src="https://onelineplayer.com/player.html?autoplay=false&autopause=true&muted=false&loop=true&url=https%3A%2F%2Fvimeo.com%2F226137389&poster=https%3A%2F%2Fysolife.com%2Fwp-content%2Fuploads%2F2020%2F08%2F0I34hJERGv92xypFG.jpg&time=true&progressBar=true&overlay=true&muteButton=true&fullscreenButton=true&style=light&quality=auto&playButton=true&buttonColor=%23FF986A&buttonSize=90"></iframe>
+            </div>
+            <div class="video2">
+                <div class="web_slider_title track">Song of the Day</div>
+                <div class="container-audio">
+                    <div class="daymusic">
+                        <div class="daybox"><img src="./images/bird.jpg" alt=""></div>
+                        <div class="daytext">Deca Joins<br>
+                            <div class="bird">
+                                鳥鳥鳥 Bird and Reflections
+                            </div>
+                            <a href="https://music.youtube.com/playlist?list=OLAK5uy_n7ZV6L1NgIiq_HPw6l3v_TW6SYQCy13_g"
+                                class="bird-btn">Read More</a>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <!-- 2 -->
+
+
+
+            </div>
+            <!-- linear-gradient bg -->
+
+        </div>
+
+        <div class="web_slider_title release">New Releases</div>
+        <div id="container">
+            <div class="slider10">
+                <button id="prev" class="btn" id="btnmove">
+                    <i class="las la-angle-left"></i>
+                </button>
+                <div class="card-content">
+                    <!-- Card -->
+                    <div class="card">
+
+                        <div class="card-img">
+
+                        </div>
+                        <div class="card-text">
+                            Music<br>Sia
+                        </div>
+
+                    </div>
+                    <!-- Card End -->
+
+                    <!-- Card -->
+                    <div class="card webiu">
+
+                        <div class="card-img">
+
+
+                        </div>
+                        <div class="card-text">
+                            Celebrity<br>IU
+                            <div class="play-music">
+                                <div id="music-animation" class="music-animation">
+
+                                </div>
+                                <div class="music-toggle"><a onClick="togglePlay()" id="toggle"
+                                        data-text-swap="Off">Play</a></div>
+                            </div>
+                            <audio id="music" loop="loop" src="./music/IU_ Celebrity.mp3"></audio>
+                        </div>
+                    </div>
+                    <!-- Card End -->
+
+                    <!-- Card -->
+                    <div class="card webzuto">
+
+                        <div class="card-img">
+
+                        </div>
+                        <div class="card-text">
+                            Gusare<br>ZUTOMAYO
+
+                        </div>
+                    </div>
+                    <!-- Card End -->
+
+                    <!-- Card -->
+                    <div class="card websoul">
+
+                        <div class="card-img">
+
+                        </div>
+                        <div class="card-text">
+                            Slumber Days<br>SoulFa
+                        </div>
+                    </div>
+                    <!-- Card End -->
+
+                    <!-- Card -->
+                    <div class="card  webchungha">
+
+                        <div class="card-img">
+
+
+                        </div>
+                        <div class="card-text">
+                            Querencia<br>CHUNG HA
+
+                        </div>
+                    </div>
+                    <!-- Card End -->
+
+                    <!-- Card -->
+                    <div class="card websam">
+
+                        <div class="card-img">
+
+                        </div>
+                        <div class="card-text">
+                            Live<br>Sam Smith
+                        </div>
+                    </div>
+                    <!-- Card End -->
+                    <!-- Card -->
+                    <div class="card webkiro">
+
+                        <div class="card-img">
+
+                        </div>
+                        <div class="card-text">
+                            FIZZY POP<br>Kiro Akiyama
+                        </div>
+                    </div>
+                    <!-- Card End -->
+                    <!-- Card -->
+                    <div class="card websirup">
+
+                        <div class="card-img">
+
+                        </div>
+                        <div class="card-text">
+                            Cure<br>Sirup
+                        </div>
+                    </div>
+                    <!-- Card End -->
+                    <!-- Card -->
+                    <div class="card webdua">
+
+                        <div class="card-img">
+
+                        </div>
+                        <div class="card-text">
+                            We're Good<br>Dua Lipa
+                        </div>
+                    </div>
+                    <!-- Card End -->
+                    <!-- Card -->
+                    <div class="card webdragon">
+
+                        <div class="card-img">
+
+                        </div>
+                        <div class="card-text">
+                            Follow You<br>Imagine Dragons
+                        </div>
+                    </div>
+                    <!-- Card End -->
+                    <!-- Card -->
+                    <div class="card webiro">
+
+                        <div class="card-img">
+
+                        </div>
+                        <div class="card-text">
+
+                            Irokousui<br>Yoh Kamiyama
+                        </div>
+                    </div>
+                    <!-- Card End -->
+                    <!-- Card -->
+                    <div class="card webmello">
+
+                        <div class="card-img">
+
+                        </div>
+                        <div class="card-text">
+                            You<br>benny blanco & 2 more
+                        </div>
+                    </div>
+                    <!-- Card End -->
+                    <!-- Card -->
+                    <div class="card webtoe">
+
+                        <div class="card-img">
+
+                        </div>
+                        <div class="card-text">
+                            DOKU-EN-KAI<br>Toe
+                        </div>
+                    </div>
+                    <!-- Card End -->
+
+                </div>
+                <button id="next" class="btn " class="btnmove">
+                    <i class="las la-angle-right"></i>
+                </button>
+            </div>
+
+        </div>
+        <div class="musicrecentwrap">
+            <div class="web_slider_title recent">Recently Played</div>
+            <div id="container">
+                <div class="slider9">
+                    <button id="prev2" class="btn" id="btnmove">
+                        <i class="las la-angle-left"></i>
+                    </button>
+                    <div class="card-content2">
+                        <!-- Card -->
+                        <div class="card webgen">
+
+                            <div class="card-img">
+
+                            </div>
+                            <div class="card-text">
+                                Create<br>Gen Hoshino
+                            </div>
+                        </div>
+                        <!-- Card End -->
+
+                        <!-- Card -->
+                        <div class="card webthefin">
+
+                            <div class="card-img">
+
+
+                            </div>
+                            <div class="card-text">
+                                Pale Blue<br>The fin.
+                            </div>
+                        </div>
+                        <!-- Card End -->
+
+                        <!-- Card -->
+                        <div class="card websaka">
+
+                            <div class="card-img">
+
+                            </div>
+                            <div class="card-text">
+                                蓮の花<br>Sakanaction
+                            </div>
+                        </div>
+                        <!-- Card End -->
+
+                        <!-- Card -->
+                        <div class="card web1975">
+
+                            <div class="card-img">
+
+                            </div>
+                            <div class="card-text">
+                                Somebody Else<br>The 1975
+                            </div>
+                        </div>
+                        <!-- Card End -->
+
+                        <!-- Card -->
+                        <div class="card websasha">
+
+                            <div class="card-img">
+
+
+                            </div>
+                            <div class="card-text">
+                                Thoughts<br>Sasha Sloan
+                                <p>
+                            </div>
+                        </div>
+                        <!-- Card End -->
+
+                        <!-- Card -->
+                        <div class="card webdeca">
+
+                            <div class="card-img">
+
+                            </div>
+                            <div class="card-text">
+                                Wave ()<br>Deca Joins
+                            </div>
+                        </div>
+                        <!-- Card End -->
+                        <!-- Card -->
+                        <div class="card webking">
+
+                            <div class="card-img">
+
+                            </div>
+                            <div class="card-text">
+                                Hakujitsu<br>King Gnu
+                            </div>
+                        </div>
+                        <!-- Card End -->
+                        <!-- Card -->
+                        <div class="card webhyukoh">
+
+                            <div class="card-img">
+
+                            </div>
+                            <div class="card-text">
+                                TOMBOY<br>HYUKOH
+                            </div>
+                        </div>
+                        <!-- Card End -->
+                        <!-- Card -->
+                        <div class="card webtwenty">
+
+                            <div class="card-img">
+
+                            </div>
+                            <div class="card-text">
+                                Heathens<br>Twenty One Pilots
+                            </div>
+                        </div>
+                        <!-- Card End -->
+                        <!-- Card -->
+                        <div class="card webavici">
+
+                            <div class="card-img">
+
+                            </div>
+                            <div class="card-text">
+                                Lonely Together <br>Avicii
+                            </div>
+                        </div>
+                        <!-- Card End -->
+                        <!-- Card -->
+                        <div class="card webtones">
+
+                            <div class="card-img">
+
+                            </div>
+                            <div class="card-text">
+                                Dance Monkey<br>Tones and I
+                            </div>
+                        </div>
+                        <!-- Card End -->
+                        <!-- Card -->
+                        <div class="card webradwimps">
+
+                            <div class="card-img">
+
+                            </div>
+                            <div class="card-text">
+                                Blame Summer<br>RADWIMPS
+                            </div>
+                        </div>
+                        <!-- Card End -->
+                        <!-- Card -->
+                        <div class="card webcoldplay">
+
+                            <div class="card-img">
+
+                            </div>
+                            <div class="card-text">
+                                Trouble In Town<br>Coldplay
+                            </div>
+                        </div>
+                        <!-- Card End -->
+
+                    </div>
+                    <button id="next2" class="btn " class="btnmove">
+                        <i class="las la-angle-right"></i>
+                    </button>
+                </div>
+
+
+
+            </div>
+
+
+
+
+
+
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+
+
+
+
+
+
+
+
+    <script>$(function () {
+            $('.carousel-item').eq(0).addClass('active');
+            var total = $('.carousel-item').length;
+            var current = 0;
+            $('#moveRight').on('click', function () {
+                var next = current;
+                current = current + 1;
+                setSlide(next, current);
+            });
+            $('#moveLeft').on('click', function () {
+                var prev = current;
+                current = current - 1;
+                setSlide(prev, current);
+            });
+            function setSlide(prev, next) {
+                var slide = current;
+                if (next > total - 1) {
+                    slide = 0;
+                    current = 0;
+                }
+                if (next < 0) {
+                    slide = total - 1;
+                    current = total - 1;
+                }
+                $('.carousel-item').eq(prev).removeClass('active');
+                $('.carousel-item').eq(slide).addClass('active');
+                setTimeout(function () {
+
+                }, 800);
+
+
+
+                console.log('current ' + current);
+                console.log('prev ' + prev);
+            }
+        });</script>
+
+
+    <!-- cd -->
+
+    <script>
+
+        const next = document.querySelector('#next')
+        const prev = document.querySelector('#prev')
+
+        function handleScrollNext(direction) {
+            const cards = document.querySelector('.card-content')
+            cards.scrollLeft = cards.scrollLeft += window.innerWidth / 2 > 600 ? window.innerWidth / 2 : window.innerWidth - 100
+        }
+
+        function handleScrollPrev(direction) {
+            const cards = document.querySelector('.card-content')
+            cards.scrollLeft = cards.scrollLeft -= window.innerWidth / 2 > 600 ? window.innerWidth / 2 : window.innerWidth - 100
+        }
+
+        next.addEventListener('click', handleScrollNext)
+        prev.addEventListener('click', handleScrollPrev)</script>
+
+    <!-- cd2 -->
+
+    <script>
+
+        const next2 = document.querySelector('#next2')
+        const prev2 = document.querySelector('#prev2')
+
+        function handleScrollNext2(direction) {
+            const cards2 = document.querySelector('.card-content2')
+            cards2.scrollLeft = cards2.scrollLeft += window.innerWidth / 2 > 600 ? window.innerWidth / 2 : window.innerWidth - 100
+        }
+
+        function handleScrollPrev2(direction) {
+            const cards2 = document.querySelector('.card-content2')
+            cards2.scrollLeft = cards2.scrollLeft -= window.innerWidth / 2 > 600 ? window.innerWidth / 2 : window.innerWidth - 100
+        }
+
+        next2.addEventListener('click', handleScrollNext2)
+        prev2.addEventListener('click', handleScrollPrev2)</script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script>$(document).ready(function () {
+            function detect_active() {
+                // get active
+                var get_active = $("#dp-slider .dp_item:first-child").data("class");
+                $("#dp-dots li").removeClass("active");
+                $("#dp-dots li[data-class=" + get_active + "]").addClass("active");
+            }
+            $("#dp-next").click(function () {
+                var total = $(".dp_item").length;
+                $("#dp-slider .dp_item:first-child").hide().appendTo("#dp-slider").fadeIn();
+                $.each($(".dp_item"), function (index, dp_item) {
+                    $(dp_item).attr("data-position", index + 1);
+                });
+                detect_active();
+            });
+
+            $("#dp-prev").click(function () {
+                var total = $(".dp_item").length;
+                $("#dp-slider .dp_item:last-child").hide().prependTo("#dp-slider").fadeIn();
+                $.each($(".dp_item"), function (index, dp_item) {
+                    $(dp_item).attr("data-position", index + 1);
+                });
+
+                detect_active();
+            });
+
+            $("#dp-dots li").click(function () {
+                $("#dp-dots li").removeClass("active");
+                $(this).addClass("active");
+                var get_slide = $(this).attr("data-class");
+                console.log(get_slide);
+                $("#dp-slider .dp_item[data-class=" + get_slide + "]")
+                    .hide()
+                    .prependTo("#dp-slider")
+                    .fadeIn();
+                $.each($(".dp_item"), function (index, dp_item) {
+                    $(dp_item).attr("data-position", index + 1);
+                });
+            });
+
+            $("body").on("click", "#dp-slider .dp_item:not(:first-child)", function () {
+                var get_slide = $(this).attr("data-class");
+                console.log(get_slide);
+                $("#dp-slider .dp_item[data-class=" + get_slide + "]")
+                    .hide()
+                    .prependTo("#dp-slider")
+                    .fadeIn();
+                $.each($(".dp_item"), function (index, dp_item) {
+                    $(dp_item).attr("data-position", index + 1);
+                });
+
+                detect_active();
+            });
+        });
+    </script>
+    <script>var music = document.getElementById("music");
+        var isPlaying = false;
+        music.volume = 0.2;
+        function togglePlay() {
+            if (isPlaying) {
+                music.pause();
+            } else {
+                music.play();
+            }
+        }
+        music.onplaying = function () {
+            isPlaying = true;
+            document.getElementById("music-animation").classList.add("on");
+        };
+        music.onpause = function () {
+            isPlaying = false;
+            document.getElementById("music-animation").classList.remove("on");
+        };
+
+        var button = document.getElementById("toggle");
+        button.addEventListener(
+            "click",
+            function () {
+                if (button.getAttribute("data-text-swap") == button.innerHTML) {
+                    button.innerHTML = button.getAttribute("data-text-original");
+                } else {
+                    button.setAttribute("data-text-original", button.innerHTML);
+                    button.innerHTML = button.getAttribute("data-text-swap");
+                }
+            },
+            false
+        );
+    </script>
+</body>
+
+</html>
