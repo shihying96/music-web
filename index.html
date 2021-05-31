@@ -79,6 +79,8 @@
 
             }
 
+
+
             .premium {
                 background-color: #FF986A;
                 box-shadow: 3px 3px 12px #FF986A;
@@ -88,12 +90,12 @@
                 color: #fff;
                 width: 250px;
                 height: 35px;
-                line-height: 35px;
                 text-align: center;
                 border-radius: 20px;
                 margin: 0 auto;
                 margin-top: 40px;
                 letter-spacing: 0.4px;
+                border-color: #ff996a1f;
             }
 
             .free {
@@ -101,6 +103,7 @@
                 background-color: #ffffff41;
                 color: #ffffff;
                 box-shadow: none;
+                line-height: 35px;
             }
 
             .logo {
@@ -151,6 +154,12 @@
             a:hover {
                 text-decoration: none;
             }
+
+            .premium_wrap {
+
+                width: 250px;
+                margin: 0 auto;
+            }
         }
 
 
@@ -199,6 +208,7 @@
 
             .premium_wrap {
                 display: flex;
+
             }
 
             .premium {
@@ -210,7 +220,6 @@
                 color: #fff;
                 width: 250px;
                 height: 35px;
-                line-height: 35px;
                 text-align: center;
                 border-radius: 20px;
                 margin: 0 auto;
@@ -218,10 +227,11 @@
                 margin-left: 700px;
                 margin-right: 30px;
                 letter-spacing: 0.4px;
+                border-color: #ff996a1f;
             }
 
             .free {
-
+                line-height: 35px;
                 background-color: #ffffff41;
                 color: #ffffff;
                 box-shadow: none;
@@ -298,7 +308,7 @@
         <div class="title">Open the<br> world of music.<br><span>
                 It’s all here.</span></div>
         <div class="premium_wrap">
-            <div class="premium"> <a href="./page1.html">Premium</a></div>
+            <button class="premium" onclick="location.href='./page1.html'"> Premium</button>
 
             <div class="premium free">Free</div>
 
@@ -327,7 +337,6 @@
         integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script>
         $('a').click().css('color', '#fff')
-
     </script>
 </body>
 

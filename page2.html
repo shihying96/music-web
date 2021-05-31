@@ -365,7 +365,7 @@
                 flex-shrink: 0;
                 width: 140px;
                 height: 70px;
-                box-shadow: 3px 3px 12px#0000007a;
+                box-shadow: 0 0 3rem -1rem rgb(0 0 0 / 20%);
                 margin-right: 15px;
                 margin-bottom: 70px;
                 border-radius: 20px;
@@ -654,12 +654,19 @@
 
             .eventtext span {
                 margin-top: 20px;
+                cursor: context-menu;
+            }
+
+            .eventtext span:hover {
+                margin-top: 20px;
+                cursor: context-menu;
             }
 
             .eventtext:hover,
             .eventtext span:hover {
                 background-color: #ffd3be;
                 border-radius: 10px;
+                cursor: context-menu;
             }
 
             .popularspace {
@@ -1301,6 +1308,11 @@
                 border-radius: 10px;
             }
 
+            a:focus,
+            a:hover {
+                color: #515151;
+                text-decoration: none;
+            }
 
         }
     </style>
@@ -1605,7 +1617,8 @@
             integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 
 
-        <script>// This is "probably" IE9 compatible but will need some fallbacks for IE8
+        <script>
+            // This is "probably" IE9 compatible but will need some fallbacks for IE8
             // - (event listeners, forEach loop)
 
             // wait for the entire page to finish loading
@@ -1637,11 +1650,11 @@
                 });
 
             }
-
         </script>
 
 
-        <script>  function createTrackItem(index, name, duration) {
+        <script>
+            function createTrackItem(index, name, duration) {
                 var trackItem = document.createElement('div');
                 trackItem.setAttribute("class", "playlist-track-ctn");
                 trackItem.setAttribute("id", "ptc-" + index);
@@ -1671,8 +1684,7 @@
                 document.querySelector("#ptc-" + index).appendChild(trackDurationItem);
             }
 
-            var listAudio = [
-                {
+            var listAudio = [{
                     name: "Answer",
                     file: "./music/Square_a_Saw_-_Answer.mp3",
                     duration: "02:39"
@@ -1701,8 +1713,7 @@
                     name: "Karma",
                     file: "./music/RENAE_-_Karma__Libra_.mp3",
                     duration: "04:29"
-                }
-                ,
+                },
                 {
                     name: "Someone",
                     file: "./music/Samie_Bower_-_Someone.mp3",
@@ -1759,7 +1770,8 @@
             currentAudio.load()
 
             currentAudio.onloadedmetadata = function () {
-                document.getElementsByClassName('duration')[0].innerHTML = this.getMinutes(this.currentAudio.duration)
+                document.getElementsByClassName('duration')[0].innerHTML = this.getMinutes(this.currentAudio
+                    .duration)
             }.bind(this);
 
             var interval1;
@@ -1898,7 +1910,8 @@
                     volMute.style.display = "none"
                     volUp.style.display = "block"
                 }
-            }</script>
+            }
+        </script>
 </body>
 
 </html>

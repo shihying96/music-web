@@ -2116,6 +2116,9 @@
                 margin-top: 20px;
             }
 
+            .site-btn:hover {
+                color: #fff !important;
+            }
 
         }
     </style>
@@ -2853,7 +2856,8 @@
 
 
 
-    <script>$(function () {
+    <script>
+        $(function () {
             $('.carousel-item').eq(0).addClass('active');
             var total = $('.carousel-item').length;
             var current = 0;
@@ -2867,6 +2871,7 @@
                 current = current - 1;
                 setSlide(prev, current);
             });
+
             function setSlide(prev, next) {
                 var slide = current;
                 if (next > total - 1) {
@@ -2888,52 +2893,58 @@
                 console.log('current ' + current);
                 console.log('prev ' + prev);
             }
-        });</script>
+        });
+    </script>
 
 
     <!-- cd -->
 
     <script>
-
         const next = document.querySelector('#next')
         const prev = document.querySelector('#prev')
 
         function handleScrollNext(direction) {
             const cards = document.querySelector('.card-content')
-            cards.scrollLeft = cards.scrollLeft += window.innerWidth / 2 > 600 ? window.innerWidth / 2 : window.innerWidth - 100
+            cards.scrollLeft = cards.scrollLeft += window.innerWidth / 2 > 600 ? window.innerWidth / 2 : window
+                .innerWidth - 100
         }
 
         function handleScrollPrev(direction) {
             const cards = document.querySelector('.card-content')
-            cards.scrollLeft = cards.scrollLeft -= window.innerWidth / 2 > 600 ? window.innerWidth / 2 : window.innerWidth - 100
+            cards.scrollLeft = cards.scrollLeft -= window.innerWidth / 2 > 600 ? window.innerWidth / 2 : window
+                .innerWidth - 100
         }
 
         next.addEventListener('click', handleScrollNext)
-        prev.addEventListener('click', handleScrollPrev)</script>
+        prev.addEventListener('click', handleScrollPrev)
+    </script>
 
     <!-- cd2 -->
 
     <script>
-
         const next2 = document.querySelector('#next2')
         const prev2 = document.querySelector('#prev2')
 
         function handleScrollNext2(direction) {
             const cards2 = document.querySelector('.card-content2')
-            cards2.scrollLeft = cards2.scrollLeft += window.innerWidth / 2 > 600 ? window.innerWidth / 2 : window.innerWidth - 100
+            cards2.scrollLeft = cards2.scrollLeft += window.innerWidth / 2 > 600 ? window.innerWidth / 2 : window
+                .innerWidth - 100
         }
 
         function handleScrollPrev2(direction) {
             const cards2 = document.querySelector('.card-content2')
-            cards2.scrollLeft = cards2.scrollLeft -= window.innerWidth / 2 > 600 ? window.innerWidth / 2 : window.innerWidth - 100
+            cards2.scrollLeft = cards2.scrollLeft -= window.innerWidth / 2 > 600 ? window.innerWidth / 2 : window
+                .innerWidth - 100
         }
 
         next2.addEventListener('click', handleScrollNext2)
-        prev2.addEventListener('click', handleScrollPrev2)</script>
+        prev2.addEventListener('click', handleScrollPrev2)
+    </script>
 
     <script src="https://code.jquery.com/jquery-3.5.1.js"
         integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-    <script>$(document).ready(function () {
+    <script>
+        $(document).ready(function () {
             function detect_active() {
                 // get active
                 var get_active = $("#dp-slider .dp_item:first-child").data("class");
@@ -2988,9 +2999,11 @@
             });
         });
     </script>
-    <script>var music = document.getElementById("music");
+    <script>
+        var music = document.getElementById("music");
         var isPlaying = false;
         music.volume = 0.2;
+
         function togglePlay() {
             if (isPlaying) {
                 music.pause();

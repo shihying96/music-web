@@ -665,7 +665,7 @@
 
             .playlist-btn-play {
                 pointer-events: none;
-                padding-top: 5px;
+                padding-top: 10px;
                 padding-bottom: 5px;
             }
 
@@ -1261,7 +1261,7 @@
 
             .playlist-btn-play {
                 pointer-events: none;
-                padding-top: 5px;
+                padding-top: 10px;
                 padding-bottom: 5px;
             }
 
@@ -1398,7 +1398,7 @@
                 display: block;
                 width: 100%;
                 height: 0;
-                background-image: linear-gradient(180deg, #fffaadb2, #e9d3667c 20%, rgba(238, 243, 175, 0.493)80%, #f5e3898a);
+                background-image: linear-gradient(180deg, #fffaadb2, #e9cb667c 20%, rgba(255, 243, 174, 0.493)80%, #f5ee898a);
                 /* background-image: linear-gradient(180deg, #fff5de, #fff6e1 20%, rgb(247, 227, 180)80%, #FFDF94); */
                 transition: all 0.5s ease;
             }
@@ -1806,7 +1806,8 @@
 
 
 
-    <script>  function createTrackItem(index, name, duration) {
+    <script>
+        function createTrackItem(index, name, duration) {
             var trackItem = document.createElement('div');
             trackItem.setAttribute("class", "playlist-track-ctn");
             trackItem.setAttribute("id", "ptc-" + index);
@@ -1836,8 +1837,7 @@
             document.querySelector("#ptc-" + index).appendChild(trackDurationItem);
         }
 
-        var listAudio = [
-            {
+        var listAudio = [{
                 name: "Good In Bed",
                 file: "./music/goodinbed.mp3",
                 duration: "03:59"
@@ -2052,12 +2052,10 @@
                 volMute.style.display = "none"
                 volUp.style.display = "block"
             }
-        }</script>
+        }
+    </script>
 
     <script>
-
-
-
         $('.shishinew').mouseenter(function () {
             $('.vinyl').addClass('marginLeft');
             console.log('margin-left', $(this).marginLeft);
@@ -2091,20 +2089,15 @@
             $('.vinyl3').removeClass('marginLeft3').css('transition', '0.5s');
             console.log('margin-left', $(this).marginLeft);
         })
-
-
     </script>
     <script>
-
         let nowNumber = 0;
         let interval;
         interval = setInterval(() => {
             if (nowNumber < 158) {
                 nowNumber += parseInt(158 / 20);
                 $('.music0').text(nowNumber);
-            }
-
-            else {
+            } else {
                 $('.music0').text('158');
                 clearInterval(interval);
             }
@@ -2117,9 +2110,7 @@
             if (nowNumber1 < 25480) {
                 nowNumber1 += parseInt(25480 / 20);
                 $('.fansnum').text(nowNumber1);
-            }
-
-            else {
+            } else {
                 $('.fansnum').text('25480');
                 clearInterval(interval2);
             }
@@ -2132,14 +2123,11 @@
             if (nowNumber2 < 827) {
                 nowNumber2 += parseInt(827 / 20);
                 $('.follownum').text(nowNumber2);
-            }
-
-            else {
+            } else {
                 $('.follownum').text('827');
                 clearInterval(interval3);
             }
         }, 50);
-
     </script>
 
 

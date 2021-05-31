@@ -22,6 +22,42 @@
             outline: none;
         }
 
+        * {
+            margin: 0;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-family: 'Poppins', sans-serif;
+            box-sizing: border-box;
+        }
+
+
+
+
+
+
+
+
+
+        @keyframes bganimation {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+
+        .jumbotron .jumbotron-fluid {
+            padding: 0;
+        }
+
+
+
         @media (max-width: 375px) {
             body {
                 font-family: 'Noto Sans TC', sans-serif;
@@ -60,6 +96,7 @@
                 overflow: hidden;
                 flex-grow: 1;
                 height: calc(100% - 80px);
+
             }
 
             body .content .lyrics {
@@ -69,7 +106,8 @@
                 margin: 0 20px;
                 text-align: center;
                 transition: all 0.25s;
-                position: relative;
+
+
             }
 
             body .content .lyrics>div {
@@ -102,6 +140,7 @@
                 max-height: 80px;
                 display: flex;
                 flex-direction: row;
+                margin-bottom: 50px;
             }
 
             body .player .left {
@@ -167,6 +206,155 @@
 
             .song {
                 font-family: 'Poppins', sans-serif;
+            }
+
+            body {
+                height: 100%;
+            }
+
+            html {
+                height: 100%;
+            }
+
+
+
+
+            .jumbotron {
+                /* background: linear-gradient(to top, #fad98c 30%, #f8f6ca); */
+                /* background-image: linear-gradient(to bottom, #ffedb7, #fffef9 70%, #fffde9, #ffedb5); */
+
+                height: 100%;
+                position: relative;
+                background-color: #FAFAFA;
+            }
+
+            .web-nav {
+                display: none;
+            }
+
+
+
+
+
+            .mobile-bottom-nav {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                z-index: 1000;
+                will-change: transform;
+                transform: translateZ(0);
+                display: flex;
+                height: 50px;
+                box-shadow: 0 -2px 5px -2px #f1be45ab;
+                background-color: #ffde90d7;
+            }
+
+            .mobile-bottom-nav__item {
+                flex-grow: 1;
+                text-align: center;
+                font-size: 12px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            .mobile-bottom-nav__item--active {
+                color: #fff;
+            }
+
+            .mobile-bottom-nav__item-content {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .home {
+                width: 69.53px;
+            }
+
+            .home img {
+                width: 30%;
+            }
+
+            .navbar {
+                position: fixed;
+                top: 0;
+                /* Position the navbar at the top of the page */
+                width: 100%;
+
+            }
+
+            .user_wrap {
+                width: 16px;
+                float: right;
+                padding: 0;
+                position: absolute;
+                z-index: 2;
+                margin-top: 24px;
+                margin-left: 330px;
+            }
+
+            .user img {
+                width: 100%;
+
+            }
+
+
+            .navbar-brand {
+
+                z-index: 2;
+                width: 100px;
+                height: 50px;
+                margin: 0 auto;
+                margin-left: 20px;
+                padding: 10px 10px;
+                margin-top: 10px;
+
+            }
+
+            .navbar-brand img {
+                width: 100%;
+                height: 100%;
+
+
+            }
+
+            .login_wrap {
+                display: flex;
+            }
+
+            .login {
+
+                font-size: 12px;
+                font-family: 'Poppins', sans-serif;
+                font-weight: normal;
+                color: #ffffff;
+                width: 70px;
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+                margin: 0 auto;
+                letter-spacing: 0.4px;
+                border-radius: 20px;
+                margin-left: 260px;
+                border: 1px solid rgba(255, 255, 255, 0.452);
+            }
+
+            .signup {
+                margin-left: 0;
+
+            }
+
+
+
+            .mobileuser {
+                width: 20px;
+                margin-left: 300px;
+                margin-top: -30px;
+            }
+
+            .mobileuser img {
+                width: 100%;
             }
 
         }
@@ -351,6 +539,125 @@
                 font-family: 'Poppins', sans-serif;
             }
 
+            .web-nav {
+                width: 100%;
+                position: fixed;
+                bottom: 0;
+                top: 0;
+                right: 0;
+                z-index: 1000;
+                will-change: transform;
+                display: flex;
+                height: 60px;
+                box-shadow: 0 -2px 5px -2px #f1be45ab;
+                background-color: #ffde90d7;
+
+            }
+
+
+            .web-nav__item {
+                display: flex;
+                margin: 0 auto;
+                margin-top: 20px;
+                width: fit-content;
+                margin-right: 40px;
+                /* border: 1px solid red; */
+            }
+
+            .web-nav__item-content {
+                margin-right: 10px;
+            }
+
+            .mobile-bottom-nav {
+                display: none;
+                /* position: fixed;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                z-index: 1000;
+                will-change: transform;
+                transform: translateZ(0);
+                display: flex;
+                height: 50px;
+                box-shadow: 0 -2px 5px -2px #f1be45ab;
+                background-color: #FFDD90; */
+            }
+
+
+
+            .home {
+                width: 69.53px;
+            }
+
+            .home img {
+                width: 30%;
+            }
+
+
+
+            .user_wrap {
+                width: 8px;
+                padding: 0;
+                z-index: 1000;
+                position: relative;
+                margin-top: -2px;
+                margin-left: 10px;
+
+            }
+
+            .user img {
+                width: 100%;
+
+
+            }
+
+
+            .navbar-brand {
+                display: flex;
+                width: 100px;
+                height: 50px;
+                margin: 0 auto;
+                margin-left: 80px;
+                padding: 10px 10px;
+                margin-top: -14px;
+                margin-left: -1400px;
+                z-index: 1000;
+                position: absolute;
+
+
+            }
+
+            .navbar-brand img {
+                width: 100%;
+                height: auto;
+            }
+
+            .login_wrap {
+                display: flex;
+            }
+
+            .login {
+
+                font-size: 12px;
+                font-family: 'Poppins', sans-serif;
+                font-weight: normal;
+                color: #ffffff;
+                width: 70px;
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+                margin: 0 auto;
+                letter-spacing: 0.4px;
+                border-radius: 20px;
+                margin-left: 260px;
+                border: 1px solid rgba(255, 255, 255, 0.452);
+            }
+
+            .signup {
+                margin-left: 0;
+
+            }
+
 
         }
     </style>
@@ -358,7 +665,110 @@
 
 <body>
 
+    <!-- nav -->
+    <div class="navbar-brand"> <a href="./page1.html"><img src="./images/logo2.svg" alt=""></a>
+        <div class="mobileuser"><img src="./images/user2.svg" alt="">
+        </div>
+    </div>
 
+    <nav class="mobile-bottom-nav">
+
+        <div class="mobile-bottom-nav__item mobile-bottom-nav__item--active">
+            <div class="mobile-bottom-nav__item-content">
+
+                <div class="home">
+                    <a href="./page1.html"><img src="./images/home.svg" alt=""></a>
+                </div>
+
+            </div>
+        </div>
+        <div class="mobile-bottom-nav__item">
+            <div class="mobile-bottom-nav__item-content">
+                <div class="home">
+                    <a href="./page2.html"><img src="./images/search.svg" alt=""></a>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-bottom-nav__item">
+            <div class="mobile-bottom-nav__item-content">
+                <div class="home"><a href="./page3.html"><img src="./images/library.svg" alt=""></a></div>
+            </div>
+        </div>
+
+        <div class="mobile-bottom-nav__item">
+            <div class="mobile-bottom-nav__item-content">
+                <div class="home"> <a href="./musicplayer.html"><img src="./images/playlist.svg" alt=""></a></div>
+            </div>
+        </div>
+        <div class="mobile-bottom-nav__item">
+            <div class="mobile-bottom-nav__item-content">
+                <div class="home"><a href="#"><img src="./images/heart.svg" alt=""></a></div>
+            </div>
+        </div>
+
+
+
+    </nav>
+    <!-- nav -->
+
+    <nav class="web-nav">
+        <div class="web-nav__item web-nav__item--active">
+
+            <nav class="navbar">
+                <div class="navbar-brand">
+                    <a href="./page1.html">
+                        <img src="./images/logo.svg" alt="">
+                    </a>
+
+                </div>
+                <!-- <div class="user_wrap">
+            <img class="user" src="./images/user.svg" alt="">
+        </div> -->
+            </nav>
+
+
+
+            <div class="web-nav__item-content">
+
+                <div class="home">
+                    <a href="./page2.html"><img src="./images/search.svg" alt=""></a>
+                </div>
+            </div>
+
+
+            <div class="web-nav__item-content">
+
+                <div class="home"><a href="./page3.html"><img src="./images/library.svg" alt=""></a>
+
+                </div>
+            </div>
+
+
+            <div class="web-nav__item-content">
+
+                <div class="home"> <a href="./musicplayer.html"><img src="./images/playlist.svg" alt=""></a></div>
+
+            </div>
+
+
+
+            <div class="web-nav__item-content">
+
+                <div class="home"><a href="#"><img src="./images/heart.svg" alt=""></a></div>
+
+            </div>
+            <div class="web-nav__item-content">
+
+                <div class="home"><a href="#"><img src="./images/user.svg" alt="" height="22px"></a></div>
+
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- linear-gradient bg -->
+
+    <!-- Just an image -->
     <div class="content">
         <div class="lyrics"></div>
     </div>
@@ -368,7 +778,8 @@
         <div class="right">
             <div class="top">
                 <a class="artist"
-                    href="https://www.mymusic.net.tw/ux/w/song/show/p000001-a3687691-s073515-t002-c0">Dancing With Your
+                    href="https://www.mymusic.net.tw/ux/w/song/show/p000001-a3687691-s073515-t002-c0">Dancing With
+                    Your
                     Ghost</a>
                 <a class="song" href="https://www.mymusic.net.tw/ux/w/song/show/p000001-a3687691-s073515-t002-c0">Sasha
                     Sloan</a>
@@ -381,10 +792,14 @@
             </div>
         </div>
     </div>
+
     <script src="https://code.jquery.com/jquery-3.5.1.js"
         integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-    <script>console.clear();
-        var _data = JSON.parse(`{"lyrics":[{"line":"","time":-1},{"line":"Yelling at the sky","note":"","time":13500},{"line":"Screaming at the world","time":16500},{"line":"Baby, why'd you go away?","time":20000},{"line":"I'm still your girl","time":22000},{"line":"Holding on too tight","time":26000},{"line":"Head up in the clouds","note":"","time":29000},{"line":"Heaven only knows","time":33000},{"line":"Where you are now","time":35000},{"line":"","time":53000},{"line":"","time":67500},{"line":"","time":72000},{"line":"","note":"","time":95500},{"line":"","time":99000},{"line":"","time":103500},{"line":"","time":107500},{"line":"","time":112000}]}`);
+    <script>
+        console.clear();
+        var _data = JSON.parse(
+            `{"lyrics":[{"line":"","time":-1},{"line":"Yelling at the sky","note":"","time":13500},{"line":"Screaming at the world","time":16500},{"line":"Baby, why'd you go away?","time":20000},{"line":"I'm still your girl","time":22000},{"line":"Holding on too tight","time":26000},{"line":"Head up in the clouds","note":"","time":29000},{"line":"Heaven only knows","time":33000},{"line":"Where you are now","time":35000},{"line":"","time":53000},{"line":"","time":67500},{"line":"","time":72000},{"line":"","note":"","time":95500},{"line":"","time":99000},{"line":"","time":103500},{"line":"","time":107500},{"line":"","time":112000}]}`
+        );
         var currentLine = "";
 
         function align() {
@@ -392,14 +807,19 @@
             var c = $(".content").height();
             var d = $(".highlighted").offset().top - $(".highlighted").parent().offset().top;
             var e = d + (a / 2) - (c / 2);
-            $(".content").animate(
-                { scrollTop: e + "px" }, { easing: "swing", duration: 250 }
-            );
+            $(".content").animate({
+                scrollTop: e + "px"
+            }, {
+                easing: "swing",
+                duration: 250
+            });
         }
 
         var lyricHeight = $(".lyrics").height();
         $(window).on("resize", function () {
-            if ($(".lyrics").height() != lyricHeight) { //Either width changes so that a line may take up or use less vertical space or the window height changes, 2 in 1
+            if ($(".lyrics").height() !=
+                lyricHeight
+            ) { //Either width changes so that a line may take up or use less vertical space or the window height changes, 2 in 1
                 lyricHeight = $(".lyrics").height();
                 align();
             }
@@ -414,7 +834,8 @@
                 if (_data["lyrics"][past.length] != currentLine) {
                     currentLine = _data["lyrics"][past.length];
                     $(".lyrics div").removeClass("highlighted");
-                    $(`.lyrics div:nth-child(${past.length})`).addClass("highlighted"); //Text might take up more lines, do before realigning
+                    $(`.lyrics div:nth-child(${past.length})`).addClass(
+                        "highlighted"); //Text might take up more lines, do before realigning
                     align();
                 }
             });
@@ -439,7 +860,8 @@
             }
             $(".lyrics").html(html);
             align();
-        }</script>
+        }
+    </script>
 </body>
 
 </html>
