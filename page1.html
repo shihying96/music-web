@@ -37,6 +37,8 @@
 
         html {
             height: 100%;
+            overflow-x: hidden;
+
         }
 
 
@@ -45,7 +47,7 @@
         .jumbotron {
             /* background: linear-gradient(to top, #fad98c 30%, #f8f6ca); */
             /* background-image: linear-gradient(to bottom, #ffedb7, #fffef9 70%, #fffde9, #ffedb5); */
-            height: 120%;
+            /* height: 120%; */
             position: relative;
             background-color: #fafafa;
 
@@ -75,24 +77,19 @@
 
 
 
-
-        @media (max-width: 375px) {
-            body {
-                height: 100%;
-            }
+        @media (min-width: 320px) and (max-width: 1249px) {
 
             html {
                 height: 100%;
+                overflow: hidden;
             }
-
-
 
 
             .jumbotron {
                 /* background: linear-gradient(to top, #fad98c 30%, #f8f6ca); */
                 /* background-image: linear-gradient(to bottom, #ffedb7, #fffef9 70%, #fffde9, #ffedb5); */
 
-                height: 100%;
+                height: 100% !important;
                 position: relative;
                 background-color: #FAFAFA;
             }
@@ -125,6 +122,7 @@
                 font-size: 12px;
                 display: flex;
                 flex-direction: column;
+                align-items: center;
                 justify-content: center;
             }
 
@@ -223,13 +221,13 @@
                 letter-spacing: 0.15px;
                 color: rgb(70, 70, 70);
                 margin-bottom: 20px;
-                margin-left: -200px;
+                text-align: left;
             }
 
             .slider {
                 text-align: center;
                 overflow: hidden;
-                margin-top: 40px;
+                margin: 0 40px 0 40px;
             }
 
             .slides {
@@ -488,9 +486,7 @@
 
             }
 
-            .recent {
-                margin-left: -180px;
-            }
+
 
             .web_slider_title {
                 display: none;
@@ -599,6 +595,24 @@
 
 
 
+        @media (max-width: 375px) {
+            .slider {
+                text-align: center;
+                overflow: hidden;
+                margin: 0;
+            }
+
+            .slider_title {
+                font-family: 'Poppins', sans-serif;
+                font-size: 19px;
+                font-weight: 500px;
+                letter-spacing: 0.15px;
+                color: rgb(70, 70, 70);
+                margin-bottom: 20px;
+                margin-left: 15px;
+                text-align: left;
+            }
+        }
 
 
 
@@ -606,17 +620,13 @@
 
 
 
+        @media (min-width: 1249px) {
 
-
-
-
-
-
-
-
-
-
-        @media (min-width: 1200px) {
+            .jumbotron {
+                /* background: linear-gradient(to top, #fad98c 30%, #f8f6ca); */
+                /* background-image: linear-gradient(to bottom, #ffedb7, #fffef9 70%, #fffde9, #ffedb5); */
+                background-color: #FAFAFA;
+            }
 
             .web-nav {
                 width: 100%;
@@ -698,8 +708,6 @@
                 margin: 0 auto;
                 margin-left: 80px;
                 padding: 10px 10px;
-                margin-top: -18px;
-                margin-left: -1400px;
                 z-index: 1000;
                 position: absolute;
 
@@ -1107,8 +1115,6 @@
                 font-weight: 500px;
                 letter-spacing: 0.15px;
                 color: rgb(70, 70, 70);
-                margin-left: 150px;
-                margin-top: -20px;
 
             }
 
@@ -1142,11 +1148,14 @@
                 -webkit-border-radius: 20px;
                 -moz-border-radius: 20px;
                 border-radius: 20px;
-                margin-left: 150px;
+                margin-right: 75px;
             }
 
             .video_wrap {
                 display: flex;
+                justify-content: center;
+
+
             }
 
 
@@ -1452,7 +1461,8 @@
                 border-radius: 30px;
                 position: relative;
                 z-index: 10;
-                margin: 30px;
+                margin: 45px;
+                margin-top: 0;
                 min-height: 215px;
                 cursor: pointer;
                 transition: all .25s ease;
@@ -1529,10 +1539,8 @@
                 align-items: center;
                 justify-content: flex-start;
                 width: 100%;
+                height: 100%;
                 overflow: auto;
-                padding-top: 100px;
-
-                padding-right: 60px;
                 scroll-behavior: smooth;
             }
 
@@ -1554,9 +1562,7 @@
                 justify-content: flex-start;
                 width: 100%;
                 overflow: auto;
-                padding-top: 100px;
-
-                padding-right: 60px;
+                margin-top: 40px;
                 scroll-behavior: smooth;
             }
 
@@ -1575,15 +1581,13 @@
 
             .btn {
                 min-width: 60px;
-                margin: auto 30px;
-                margin-top: 440px;
+                margin: auto 20px;
                 height: 60px;
                 border-radius: 20px;
                 background: #fff;
                 border: 0px;
                 outline: none;
                 cursor: pointer;
-                z-index: 9999;
                 box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, .08);
                 transition: all .25s ease;
             }
@@ -1600,9 +1604,7 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                margin-top: -315px;
                 width: 100%;
-                height: 90vh;
                 overflow: hidden;
             }
 
@@ -1631,9 +1633,8 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                margin-top: -500px;
                 width: 100%;
-                height: 90vh;
+
                 overflow: hidden;
             }
 
@@ -1659,13 +1660,12 @@
             }
 
             .recent {
-                margin-top: 50px;
-                margin-bottom: 190px;
+                margin-top: 60px;
+                margin-left: 150px;
             }
 
-            .musicrecentwrap {
-                margin-top: -220px;
-            }
+
+            .musicrecentwrap {}
 
             .webiu {
                 background: url(./images/iu.jpg);
@@ -1794,7 +1794,7 @@
             }
 
             .dp-wrap {
-                margin: 100px auto;
+                margin: 60px auto;
                 position: relative;
                 perspective: 1000px;
                 height: 100%;
@@ -1886,7 +1886,7 @@
             }
 
             #dp-dots li.active {
-                background: #FFDF93;
+                background: #ffc336;
             }
 
             .dp_item {
@@ -1908,7 +1908,7 @@
             }
 
             .dp-content {
-                padding-left: 100px;
+                padding-left: 80px;
                 padding-right: 0;
                 display: inline-block;
                 width: 100%;
@@ -1933,7 +1933,8 @@
             .dp-content .site-btn {
                 margin-top: 15px;
                 font-size: 18px;
-                padding: 19px 40px;
+                padding: 15px 20px;
+                color: white;
             }
 
             .dp-img:before {
@@ -1997,6 +1998,7 @@
                 position: relative;
                 top: -10px;
                 text-decoration: none;
+
             }
 
             .site-btn:hover {
@@ -2006,14 +2008,13 @@
 
             .bird-btn {
                 color: #fce7ba;
-                font-size: 18px;
+                font-size: 16px;
                 font-family: 'Poppins', sans-serif;
-
-                padding: 14px 33px;
+                padding: 8px;
                 display: inline-block;
                 border-radius: 50px;
                 border: 1px solid #fce7ba;
-                margin-top: 60px;
+                margin-top: 50px;
                 text-decoration: none;
             }
 
@@ -2025,10 +2026,13 @@
             .event_text {
                 font-size: 42px;
                 color: #41414b;
+                white-space: nowrap;
             }
 
             .release {
-                margin-top: 70px;
+                margin-top: 60px;
+                margin-bottom: 40px;
+                margin-left: 150px;
             }
 
             .fa-primary {
@@ -2082,12 +2086,11 @@
 
             .daymusic {
                 display: flex;
-                width: 700px;
-                height: 300px;
+                width: 450px;
+                height: 250px;
                 background-color: rgb(255, 255, 255);
                 border-radius: 20px;
                 margin-top: 40px;
-                margin-left: 150px;
                 border: 1px solid #ececec;
                 box-shadow: 3px 3px 12px#ececec7a;
             }
@@ -2102,7 +2105,6 @@
 
             .daybox img {
                 width: 100%;
-                height: 100%;
                 border-radius: 20px;
             }
 
@@ -2120,6 +2122,42 @@
                 color: #fff !important;
             }
 
+            .oneline-wrap {
+                height: 100% !important;
+            }
+
+
+            .video2 {
+                margin-left: 75px;
+            }
+
+        }
+
+
+        @media (min-width: 999px) and (max-width: 1440px) {
+            .video {
+                margin-top: 40px;
+                -webkit-border-radius: 20px;
+                -moz-border-radius: 20px;
+                border-radius: 20px;
+                margin-right: 20px;
+
+            }
+
+            .video2 {
+                margin-left: 20px;
+                width: 400px;
+            }
+        }
+
+
+
+        @media screen and (min-width: 1000px) {
+            .jumbotron {
+                padding-top: 48px;
+                padding-bottom: 200px;
+
+            }
         }
     </style>
 </head>
@@ -2173,19 +2211,20 @@
     <!-- nav -->
 
     <nav class="web-nav">
+        <nav class="navbar">
+            <div class="navbar-brand">
+                <a href=""> <img src="./images/logo.svg" alt=""></a>
+
+
+
+            </div>
+            <!-- <div class="user_wrap">
+                <img class="user" src="./images/user.svg" alt="">
+            </div> -->
+        </nav>
         <div class="web-nav__item web-nav__item--active">
 
-            <nav class="navbar">
-                <div class="navbar-brand">
-                    <a href=""> <img src="./images/logo.svg" alt=""></a>
 
-
-
-                </div>
-                <!-- <div class="user_wrap">
-                    <img class="user" src="./images/user.svg" alt="">
-                </div> -->
-            </nav>
 
 
 
@@ -2295,7 +2334,7 @@
                             <style>
                                 .cls-1 {
                                     fill: none;
-                                    stroke: #FFDF93;
+                                    stroke: #ffc336;
                                     stroke-miterlimit: 10;
                                     stroke-width: 7px;
                                 }
@@ -2450,26 +2489,25 @@
             <div class="video1">
                 <div class="web_slider_title">Music Video</div>
                 <iframe class="video" frameborder="0" allowfullscreen="" scrolling="no" allow="autoplay;fullscreen"
-                    width="650" height="300"
+                    width="550" height="250"
                     src="https://onelineplayer.com/player.html?autoplay=false&autopause=true&muted=false&loop=true&url=https%3A%2F%2Fvimeo.com%2F226137389&poster=https%3A%2F%2Fysolife.com%2Fwp-content%2Fuploads%2F2020%2F08%2F0I34hJERGv92xypFG.jpg&time=true&progressBar=true&overlay=true&muteButton=true&fullscreenButton=true&style=light&quality=auto&playButton=true&buttonColor=%23FF986A&buttonSize=90"></iframe>
             </div>
             <div class="video2">
-                <div class="web_slider_title track">Song of the Day</div>
-                <div class="container-audio">
-                    <div class="daymusic">
-                        <div class="daybox"><img src="./images/bird.jpg" alt=""></div>
-                        <div class="daytext">Deca Joins<br>
-                            <div class="bird">
-                                鳥鳥鳥 Bird and Reflections
+                <div class="daySong">
+                    <div class="web_slider_title track">Song of the Day</div>
+                    <div class="container-audio">
+                        <div class="daymusic">
+                            <div class="daybox"><img src="./images/bird.jpg" alt=""></div>
+                            <div class="daytext">Deca Joins<br>
+                                <div class="bird">
+                                    鳥鳥鳥 Bird and Reflections
+                                </div>
+                                <a href="https://music.youtube.com/playlist?list=OLAK5uy_n7ZV6L1NgIiq_HPw6l3v_TW6SYQCy13_g"
+                                    class="bird-btn">Read More</a>
                             </div>
-                            <a href="https://music.youtube.com/playlist?list=OLAK5uy_n7ZV6L1NgIiq_HPw6l3v_TW6SYQCy13_g"
-                                class="bird-btn">Read More</a>
                         </div>
                     </div>
-
-
                 </div>
-
                 <!-- 2 -->
 
 

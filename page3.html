@@ -26,15 +26,19 @@
             font-family: 'Noto Sans TC', sans-serif;
             box-sizing: border-box;
             outline: none;
+
         }
 
+        html {
+            overflow-y: scroll;
 
+            overflow-x: hidden;
+        }
 
 
         .jumbotron {
             /* background: linear-gradient(to top, #fad98c 30%, #f8f6ca); */
             /* background-image: linear-gradient(to bottom, #ffedb7, #fffef9 70%, #fffde9, #ffedb5); */
-
             background-color: #FAFAFA;
 
         }
@@ -64,7 +68,7 @@
 
 
 
-        @media (max-width: 375px) {
+        @media (max-width: 400px) {
 
 
 
@@ -445,7 +449,7 @@
                 display: none;
                 width: 100%;
                 border-radius: 10px;
-                margin-left: 400px;
+
                 position: relative;
 
             }
@@ -483,6 +487,7 @@
                 width: 270px;
                 height: 270px;
                 margin-left: 120px;
+
             }
 
             .shishihotsong2 img {
@@ -758,9 +763,6 @@
                 padding-top: 0;
             }
 
-            .popular {
-                margin-top: 40px;
-            }
 
             .newrelease {
                 margin-top: 60px;
@@ -831,18 +833,7 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-        @media (min-width: 1200px) {
+        @media (min-width: 401px) and (max-width: 1199px) {
 
             .web-nav {
                 width: 100%;
@@ -921,14 +912,11 @@
                 display: flex;
                 width: 100px;
                 height: 50px;
-                margin: 0 auto;
-                margin-left: 80px;
                 padding: 10px 10px;
-                margin-top: -18px;
-                margin-left: -1400px;
+                margin-left: -900px;
                 z-index: 1000;
                 position: absolute;
-
+                margin-top: -20px;
 
             }
 
@@ -1006,12 +994,14 @@
             .shishinew {
                 width: 270px;
                 height: 270px;
+                position: relative;
+                z-index: 2;
             }
 
             .shishinew img {
                 width: 100%;
                 border-radius: 10px;
-                margin-left: 400px;
+
                 position: relative;
                 box-shadow: 3px 3px 12px#0000007a;
             }
@@ -1020,13 +1010,15 @@
             .shishinew2 {
                 width: 270px;
                 height: 270px;
+                position: relative;
+                z-index: 2;
             }
 
             .shishinew2 img {
                 width: 100%;
                 border-radius: 10px;
-                margin-left: 400px;
-                position: relative;
+                /* margin-left: 400px; */
+
                 box-shadow: 3px 3px 12px#0000007a;
 
             }
@@ -1035,12 +1027,14 @@
             .shishinew3 {
                 width: 270px;
                 height: 270px;
+                position: relative;
+                z-index: 2;
             }
 
             .shishinew3 img {
                 width: 100%;
                 border-radius: 10px;
-                margin-left: 400px;
+                /* margin-left: 400px; */
                 position: relative;
                 box-shadow: 3px 3px 12px#0000007a;
             }
@@ -1048,6 +1042,7 @@
 
             .shishi_wrap {
                 display: flex;
+                padding: 0 80px 0 80px;
             }
 
             .shishitittle {
@@ -1057,14 +1052,17 @@
                 letter-spacing: 0.15px;
                 color: rgb(70, 70, 70);
                 margin-top: 70px;
-                margin-left: 400px;
+                display: flex;
+                justify-content: center;
                 margin-bottom: 40px;
             }
 
             .shishihotsong {
                 width: 270px;
                 height: 270px;
-                margin-left: 120px;
+                margin-left: 50px;
+                position: absolute;
+
             }
 
             .shishihotsong img {
@@ -1075,7 +1073,8 @@
             .shishihotsong2 {
                 width: 270px;
                 height: 270px;
-                margin-left: 120px;
+                margin-left: 50px;
+                position: absolute;
             }
 
             .shishihotsong2 img {
@@ -1085,8 +1084,8 @@
             .shishihotsong3 {
                 width: 270px;
                 height: 270px;
-
-                margin-left: 120px;
+                position: absolute;
+                margin-left: 50px;
             }
 
             .shishihotsong3 img {
@@ -1094,32 +1093,34 @@
             }
 
             .marginLeft {
-                margin-left: 120px;
+                margin-left: 90px;
                 transition: 0.5s;
             }
 
             .marginLeft2 {
-                margin-left: 120px;
+                margin-left: 90px;
                 transition: 0.5s;
             }
 
             .marginLeft3 {
-                margin-left: 120px;
+                margin-left: 90px;
                 transition: 0.5s;
             }
 
             .vinyl_wrap {
                 display: flex;
                 margin-top: 40px;
+                justify-content: center;
             }
 
 
             .shishi2 {
-                margin-left: -245px;
+                /* margin-left: -245px; */
+                position: relative;
             }
 
             .shishi3 {
-                margin-left: -245px;
+                /* margin-left: -245px; */
             }
 
             .musicnumber {
@@ -1284,7 +1285,7 @@
                 background-color: #ffffff;
                 border: 1px solid #e4e4e4;
                 border-right: none;
-                margin-left: 420px;
+                /* margin-left: 420px; */
                 box-shadow: 0 1px 4px 0 rgb(0 0 0 / 10%);
                 border-radius: 10px 0 0 10px;
             }
@@ -1309,12 +1310,13 @@
                 margin-top: 8px;
             }
 
-            .col2_wrap {
-                display: flex;
+
+            .col2first {
+                margin: 0 20px 0 20px;
             }
 
             .col2second {
-                margin-left: -215px;
+                margin: 0 20px 0 20px;
             }
 
             .releaseimg {
@@ -1376,7 +1378,7 @@
                 flex-flow: row nowrap;
                 justify-content: center;
                 align-items: center;
-                margin-left: 265px;
+                /* margin-left: 265px; */
 
             }
 
@@ -1501,8 +1503,10 @@
             }
 
             .popular {
-                margin-left: 420px;
+                display: flex;
+                justify-content: left;
             }
+
 
             .content {
                 font-size: 19px;
@@ -1514,6 +1518,718 @@
                 margin-top: 40px;
                 font-size: 16px;
                 letter-spacing: 0.5px;
+            }
+
+            .shishitittle.newrelease {
+                display: flex;
+                justify-content: left;
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+        @media (min-width: 1200px) {
+
+            .web-nav {
+                width: 100%;
+                position: fixed;
+                bottom: 0;
+                top: 0;
+                right: 0;
+                z-index: 1000;
+                will-change: transform;
+                display: flex;
+                align-items: center;
+                height: 60px;
+                box-shadow: 0 -2px 5px -2px #f1be45ab;
+                background-color: #FFDF93;
+
+            }
+
+
+            .web-nav__item {
+                display: flex;
+                margin: 0 auto;
+                margin-top: 50px;
+                width: fit-content;
+                margin-right: 40px;
+                /* border: 1px solid red; */
+            }
+
+            .web-nav__item-content {
+                margin-right: 10px;
+            }
+
+            .mobile-bottom-nav {
+                display: none;
+                /* position: fixed;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                z-index: 1000;
+                will-change: transform;
+                transform: translateZ(0);
+                display: flex;
+                height: 50px;
+                box-shadow: 0 -2px 5px -2px #f1be45ab;
+                background-color: #FFDD90; */
+            }
+
+
+
+            .home {
+                width: 69.53px;
+            }
+
+            .home img {
+                width: 30%;
+            }
+
+
+
+            .user_wrap {
+                width: 8px;
+                padding: 0;
+                z-index: 1000;
+                position: relative;
+                margin-top: -2px;
+                margin-left: 10px;
+
+            }
+
+            .user img {
+                width: 100%;
+
+
+            }
+
+
+            .navbar-brand {
+                display: flex;
+                width: 100px;
+                height: 50px;
+                padding: 10px 10px;
+                margin-left: -900px;
+                z-index: 1000;
+                position: absolute;
+                margin-top: -20px;
+
+            }
+
+            .navbar-brand img {
+                width: 100%;
+                height: auto;
+            }
+
+            .login_wrap {
+                display: flex;
+            }
+
+            .login {
+
+                font-size: 12px;
+                font-family: 'Poppins', sans-serif;
+                font-weight: normal;
+                color: #ffffff;
+                width: 70px;
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+                margin: 0 auto;
+                letter-spacing: 0.4px;
+                border-radius: 20px;
+                margin-left: 260px;
+                border: 1px solid rgba(255, 255, 255, 0.452);
+            }
+
+            .signup {
+                margin-left: 0;
+
+            }
+
+
+
+            .musicbigimg {
+                display: none;
+                width: 270px;
+                height: 270px;
+                margin: 0 auto;
+                margin-top: 140px;
+            }
+
+            .musicbigimg img {
+                width: 100%;
+                border-radius: 10px;
+
+            }
+
+
+
+
+
+            .bigshishi {
+                margin: 12px auto;
+                height: 300px;
+                background: url(./images/duabig.jpeg) no-repeat;
+                background-size: cover;
+                opacity: 0.7;
+
+
+            }
+
+            .shishitext {
+                font-size: 47px;
+                font-weight: 400;
+                font-family: 'Noto Sans TC', sans-serif;
+                padding-top: 130px;
+                padding-left: 80px;
+                width: fit-content;
+                color: #fff;
+            }
+
+            .shishinew {
+                width: 270px;
+                height: 270px;
+                position: relative;
+                z-index: 2;
+            }
+
+            .shishinew img {
+                width: 100%;
+                border-radius: 10px;
+
+                position: relative;
+                box-shadow: 3px 3px 12px#0000007a;
+            }
+
+
+            .shishinew2 {
+                width: 270px;
+                height: 270px;
+                position: relative;
+                z-index: 2;
+            }
+
+            .shishinew2 img {
+                width: 100%;
+                border-radius: 10px;
+                /* margin-left: 400px; */
+
+                box-shadow: 3px 3px 12px#0000007a;
+
+            }
+
+
+            .shishinew3 {
+                width: 270px;
+                height: 270px;
+                position: relative;
+                z-index: 2;
+            }
+
+            .shishinew3 img {
+                width: 100%;
+                border-radius: 10px;
+                /* margin-left: 400px; */
+                position: relative;
+                box-shadow: 3px 3px 12px#0000007a;
+            }
+
+
+            .shishi_wrap {
+                display: flex;
+                padding: 0 80px 0 80px;
+            }
+
+            .shishitittle {
+                font-family: 'Poppins', sans-serif;
+                font-size: 19px;
+                font-weight: 500px;
+                letter-spacing: 0.15px;
+                color: rgb(70, 70, 70);
+                margin-top: 70px;
+                display: flex;
+                justify-content: center;
+                margin-bottom: 40px;
+            }
+
+            .shishihotsong {
+                width: 270px;
+                height: 270px;
+                margin-left: 50px;
+                position: absolute;
+
+            }
+
+            .shishihotsong img {
+                width: 100%;
+            }
+
+
+            .shishihotsong2 {
+                width: 270px;
+                height: 270px;
+                margin-left: 50px;
+                position: absolute;
+            }
+
+            .shishihotsong2 img {
+                width: 100%;
+            }
+
+            .shishihotsong3 {
+                width: 270px;
+                height: 270px;
+                position: absolute;
+                margin-left: 50px;
+            }
+
+            .shishihotsong3 img {
+                width: 100%;
+            }
+
+            .marginLeft {
+                margin-left: 90px;
+                transition: 0.5s;
+            }
+
+            .marginLeft2 {
+                margin-left: 90px;
+                transition: 0.5s;
+            }
+
+            .marginLeft3 {
+                margin-left: 90px;
+                transition: 0.5s;
+            }
+
+            .vinyl_wrap {
+                display: flex;
+                margin-top: 40px;
+                justify-content: center;
+            }
+
+
+            .shishi2 {
+                /* margin-left: -245px; */
+                position: relative;
+            }
+
+            .shishi3 {
+                /* margin-left: -245px; */
+            }
+
+            .musicnumber {
+                color: #fff;
+                display: flex;
+                margin-top: 20px;
+                font-weight: 400;
+                font-family: 'Noto Sans TC', sans-serif;
+                font-size: 16px;
+            }
+
+            .music {
+                padding-right: 50px;
+                padding-left: 80px;
+            }
+
+            .fans {
+                padding-right: 50px;
+            }
+
+            #myProgress {
+                width: 430px;
+                background-color: #e6e6e6;
+                cursor: pointer;
+                border-radius: 10px;
+                margin-left: 80px;
+            }
+
+            #myBar {
+                width: 0%;
+                height: 5px;
+                background-color: #FF986A;
+                border-radius: 10px;
+            }
+
+            .logo {
+                fill: red;
+            }
+
+            .btn-action {
+                cursor: pointer;
+                padding-top: -10px;
+                margin-left: 50px;
+                width: 30px;
+            }
+
+            .btn-ctn,
+            .infos-ctn {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .infos-ctn {
+                padding-top: 20px;
+            }
+
+            .btn-ctn>div {
+                padding: 5px;
+                margin-top: 18px;
+                margin-bottom: 18px;
+            }
+
+            .infos-ctn>div {
+                margin-bottom: 8px;
+
+            }
+
+            .first-btn {
+                margin-left: 3px;
+            }
+
+            .duration {
+                margin-left: 10px;
+            }
+
+            .title {
+                margin-left: 10px;
+                width: 210px;
+                text-align: center;
+            }
+
+            .player-ctn {
+                border-radius: 15px;
+                width: 610px;
+                padding: 10px;
+                background-color: rgb(255, 255, 255);
+                border-radius: 0 10px 10px 0;
+                background-color: #ffffff;
+
+                border: 1px solid #e4e4e4;
+                border-left: none;
+            }
+
+            .playlist-track-ctn {
+                display: flex;
+                background-color: #dbdbdb17;
+                margin-top: 3px;
+                border-radius: 5px;
+                border-bottom: 1px solid rgb(235, 235, 235);
+                cursor: pointer;
+            }
+
+
+            .playlist-track-ctn>div {
+                margin: 10px;
+            }
+
+            .playlist-info-track {
+                width: 80%;
+            }
+
+            .playlist-info-track,
+            .playlist-duration {
+                padding-top: 7px;
+                padding-bottom: 7px;
+
+                font-size: 14px;
+                pointer-events: none;
+            }
+
+            .playlist-ctn {
+                padding-bottom: 20px;
+            }
+
+            .active-track {
+                background: #ffffff;
+                color: #FF986A !important;
+                font-weight: bold;
+
+            }
+
+            .active-track>.playlist-info-track,
+            .active-track>.playlist-duration,
+            .active-track>.playlist-btn-play {
+                color: #FF986A !important;
+            }
+
+
+            .playlist-btn-play {
+                pointer-events: none;
+                padding-top: 10px;
+                padding-bottom: 5px;
+            }
+
+            .fas {
+                color: #CCCCCF;
+
+            }
+
+            .fa-forward {
+                padding-left: 10px;
+            }
+
+            .farr {
+                margin-left: 30px;
+            }
+
+            .smallimg {
+                width: 80px;
+                height: 600px;
+                background-color: #ffffff;
+                border: 1px solid #e4e4e4;
+                border-right: none;
+                /* margin-left: 420px; */
+                box-shadow: 0 1px 4px 0 rgb(0 0 0 / 10%);
+                border-radius: 10px 0 0 10px;
+            }
+
+            .list_wrap {
+                display: flex;
+            }
+
+            .list1 {
+                width: 50px;
+                height: 50px;
+                margin-top: 135px;
+                margin-left: 20px;
+            }
+
+            .list1 img {
+                width: 100%;
+                border-radius: 10px;
+            }
+
+            .list2 {
+                margin-top: 8px;
+            }
+
+            .col2_wrap {
+                display: flex;
+                justify-content: center;
+            }
+
+            .col2first {
+                margin: 0 20px 0 20px;
+            }
+
+            .col2second {
+                margin: 0 20px 0 20px;
+            }
+
+            .releaseimg {
+                width: 300px;
+                height: 300px;
+            }
+
+            .releaseimg img {
+                width: 100%;
+                border-radius: 10px;
+                margin-left: 70px;
+                margin-top: 60px;
+
+            }
+
+            .releasebox {
+                width: 450px;
+                height: 600px;
+                border-radius: 10px;
+                margin-left: 400px;
+                background-color: #ffffff;
+                border: 1px solid #e4e4e4;
+                box-shadow: 0 1px 4px 0 rgb(0 0 0 / 10%);
+            }
+
+            .releasetitle {
+                margin-top: 50px;
+                margin-left: 160px;
+                font-size: 19px;
+            }
+
+            .releasetext {
+                font-size: 16px;
+                margin-left: 190px;
+                letter-spacing: 0.15px;
+                font-family: 'Noto Sans TC', sans-serif;
+            }
+
+            .musictext {
+                font-size: 25px;
+                color: #fce9aa;
+
+            }
+
+            * {
+                outline: none;
+            }
+
+            ul {
+                list-style-type: none;
+            }
+
+
+
+            .box-container {
+                display: flex;
+                width: 100%;
+                /* height: 100vh; */
+                flex-flow: row nowrap;
+                justify-content: center;
+                align-items: center;
+                /* margin-left: 265px; */
+
+            }
+
+            .box-container .card {
+                position: relative;
+                border-radius: 10px;
+                overflow: hidden;
+
+                width: 350px;
+                height: 600px;
+                background-color: #ffffff;
+                border: 1px solid #e4e4e4;
+                box-shadow: 0 1px 4px 0 rgb(0 0 0 / 10%);
+            }
+
+            .box-container .card:before {
+                content: '';
+                position: absolute;
+                display: block;
+                width: 100%;
+                height: 0;
+                background-image: linear-gradient(180deg, #fffaadb2, #e9cb667c 20%, rgba(255, 243, 174, 0.493)80%, #f5ee898a);
+                /* background-image: linear-gradient(180deg, #fff5de, #fff6e1 20%, rgb(247, 227, 180)80%, #FFDF94); */
+                transition: all 0.5s ease;
+            }
+
+
+
+            .box-container .card:hover:before {
+                height: 180px;
+            }
+
+            .box-container .card:hover .social {
+                margin-top: 50px;
+            }
+
+            .box-container .card:hover .pic {
+                width: 120px;
+                height: 120px;
+                margin-top: 50px;
+
+                border-radius: 50%;
+                box-shadow: 0px 0px 10px 1px #888;
+            }
+
+            .box-container .card:hover .content {
+                margin-top: 90px;
+            }
+
+            .box-container .card .social {
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 100%;
+                height: 0;
+                margin-top: -30px;
+                text-align: center;
+                transition: margin-top 0.5s ease;
+            }
+
+            .box-container .card .social a {
+                text-decoration: none;
+                color: #2d3436;
+                padding: 8px;
+                font-size: 18px;
+                color: #fff;
+
+            }
+
+            .box-container .card .pic {
+                position: relative;
+                left: 50%;
+                top: 15%;
+                transform: translateX(-50%);
+                width: 230px;
+                height: 230px;
+                overflow: hidden;
+                transition: all 0.5s ease;
+                border-radius: 10px;
+                background: #fff;
+                box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
+            }
+
+            .box-container .card .pic img {
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+            }
+
+            .box-container .card .content {
+                margin-top: 120px;
+                text-align: center;
+                padding: 0 30px;
+                color: #2d3436;
+
+                transition: margin-top 0.5s ease;
+            }
+
+            .box-container .card .content .title {
+                margin-bottom: 0;
+                font-family: 'Yantramanav', sans-serif;
+                font-size: 22px;
+            }
+
+            .box-container .card .content span {
+                font-size: 12px;
+                letter-spacing: 1.5px;
+            }
+
+            .box-container .card .content p {
+                margin: 20px 0;
+                font-size: 12px;
+                line-height: 1.6;
+                color: #b0b0b0;
+            }
+
+            /*%% End container %%*/
+
+            #btn-faws-play-pause {
+                margin-left: -18px;
+            }
+
+            .popular {
+                display: flex;
+                justify-content: left;
+            }
+
+
+            .content {
+                font-size: 19px;
+                margin-top: 40px;
+
+            }
+
+            .club_in {
+                margin-top: 40px;
+                font-size: 16px;
+                letter-spacing: 0.5px;
+            }
+
+            .shishitittle.newrelease {
+                display: flex;
+                justify-content: left;
             }
         }
     </style>
@@ -1657,7 +2373,8 @@
         <div class="shishitittle">Albums</div>
         <div class="vinyl_wrap">
             <div class="shishi_wrap">
-                <div class="shishinew"><img src="./images/future.jpg" alt=""></div>
+                <div class="shishinew"><img src="./images/future.jpg" alt="">
+                </div>
                 <div class="shishihotsong"><img class="vinyl" src="./images/vinyl.png" alt=""></div>
             </div>
             <div class="shishi_wrap">
@@ -1838,35 +2555,35 @@
         }
 
         var listAudio = [{
-                name: "Good In Bed",
-                file: "./music/goodinbed.mp3",
-                duration: "03:59"
-            },
-            {
-                name: "Levitating",
-                file: "./music/DuaLipa-LevitatingFeaturingDaBaby.mp3",
-                duration: "03:24"
-            },
-            {
-                name: "We're Good",
-                file: "./music/Dua Lipa - Were Good (Official Music Video).mp3",
-                duration: "03:07"
-            },
-            {
-                name: "Blow Your Mind (Mwah)",
-                file: "./music/Dua Lipa - Blow Your Mind (Mwah) (Official Video).mp3",
-                duration: "02:59"
-            },
-            {
-                name: "Tears Dry on Their Own",
-                file: "./music/Tears Dry on Their Own (Acoustic).mp3",
-                duration: "03:17"
-            },
-            {
-                name: "Break My Heart",
-                file: "./music/Dua Lipa - Break My Heart (Official Video).mp3",
-                duration: "03:42"
-            }
+            name: "Good In Bed",
+            file: "./music/goodinbed.mp3",
+            duration: "03:59"
+        },
+        {
+            name: "Levitating",
+            file: "./music/DuaLipa-LevitatingFeaturingDaBaby.mp3",
+            duration: "03:24"
+        },
+        {
+            name: "We're Good",
+            file: "./music/Dua Lipa - Were Good (Official Music Video).mp3",
+            duration: "03:07"
+        },
+        {
+            name: "Blow Your Mind (Mwah)",
+            file: "./music/Dua Lipa - Blow Your Mind (Mwah) (Official Video).mp3",
+            duration: "02:59"
+        },
+        {
+            name: "Tears Dry on Their Own",
+            file: "./music/Tears Dry on Their Own (Acoustic).mp3",
+            duration: "03:17"
+        },
+        {
+            name: "Break My Heart",
+            file: "./music/Dua Lipa - Break My Heart (Official Video).mp3",
+            duration: "03:42"
+        }
         ]
 
         for (var i = 0; i < listAudio.length; i++) {
